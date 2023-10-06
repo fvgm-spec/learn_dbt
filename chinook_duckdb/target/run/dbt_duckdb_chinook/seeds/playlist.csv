@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "chinook"."main"."playlist" ("playlist_id" integer,"name" text)
+  ;
+    -- dbt seed --
+    
+            insert into "chinook"."main"."playlist" ("playlist_id", "name") values
+            (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?)
+        
+
+;
+  
