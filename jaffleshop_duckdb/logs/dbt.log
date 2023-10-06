@@ -1,0 +1,2305 @@
+[0m12:36:56.068901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B3A518B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B3A4E7890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B3A50E0D0>]}
+
+
+============================== 12:36:56.095362 | d55a9b3d-091a-426c-a2c6-e1bcde118c71 ==============================
+[0m12:36:56.095362 [info ] [MainThread]: Running with dbt=1.5.0
+[0m12:36:56.097371 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\dev\\jaffle_shop_duckdb\\logs', 'debug': 'False', 'profiles_dir': 'D:\\dev\\jaffle_shop_duckdb', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:36:56.100360 [info ] [MainThread]: dbt version: 1.5.0
+[0m12:36:56.101876 [info ] [MainThread]: python version: 3.11.4
+[0m12:36:56.103404 [info ] [MainThread]: python path: D:\Users\felix\anaconda3\envs\dbt\python.exe
+[0m12:36:56.104915 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m12:36:56.105425 [info ] [MainThread]: Using profiles.yml file at D:\dev\jaffle_shop_duckdb\profiles.yml
+[0m12:36:56.106425 [info ] [MainThread]: Using dbt_project.yml file at D:\dev\jaffle_shop_duckdb\dbt_project.yml
+[0m12:36:56.108431 [info ] [MainThread]: Configuration:
+[0m12:36:56.227160 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:36:56.328369 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:36:56.330373 [info ] [MainThread]: Required dependencies:
+[0m12:36:56.332364 [debug] [MainThread]: Executing "git --help"
+[0m12:36:56.410250 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:36:56.412313 [debug] [MainThread]: STDERR: "b''"
+[0m12:36:56.414333 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:36:56.416342 [info ] [MainThread]: Connection:
+[0m12:36:56.418330 [info ] [MainThread]:   database: jaffle_shop
+[0m12:36:56.419337 [info ] [MainThread]:   schema: main
+[0m12:36:56.420332 [info ] [MainThread]:   path: jaffle_shop.duckdb
+[0m12:36:56.422536 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m12:36:56.423551 [debug] [MainThread]: Using duckdb connection "debug"
+[0m12:36:56.425554 [debug] [MainThread]: On debug: select 1 as id
+[0m12:36:56.426226 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:36:56.489430 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:36:56.492476 [debug] [MainThread]: On debug: Close
+[0m12:36:56.494502 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:36:56.496487 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:36:56.523658 [debug] [MainThread]: Command `dbt debug` succeeded at 12:36:56.498493 after 0.49 seconds
+[0m12:36:56.526090 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:36:56.528428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B39B8E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B34106CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B34104250>]}
+[0m12:36:56.531385 [debug] [MainThread]: Flushing usage events
+[0m12:39:03.625568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C615F685D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C615F68690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C615F68C50>]}
+
+
+============================== 12:39:03.634603 | f8439ace-09c4-46d7-9630-f50ecb193d7f ==============================
+[0m12:39:03.634603 [info ] [MainThread]: Running with dbt=1.5.0
+[0m12:39:03.638638 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\dev\\jaffle_shop_duckdb\\logs', 'fail_fast': 'False', 'profiles_dir': 'D:\\dev\\jaffle_shop_duckdb', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:39:03.829211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C615F40E90>]}
+[0m12:39:03.849365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C615F75CD0>]}
+[0m12:39:03.869590 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
+[0m12:39:03.870581 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:39:03.872447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6161D3E10>]}
+[0m12:39:04.993276 [debug] [MainThread]: 1699: static parser successfully parsed customers.sql
+[0m12:39:05.023293 [debug] [MainThread]: 1603: static parser failed on orders.sql
+[0m12:39:05.034251 [debug] [MainThread]: 1602: parser fallback to jinja rendering on orders.sql
+[0m12:39:05.039261 [debug] [MainThread]: 1699: static parser successfully parsed staging\stg_customers.sql
+[0m12:39:05.047371 [debug] [MainThread]: 1699: static parser successfully parsed staging\stg_orders.sql
+[0m12:39:05.054563 [debug] [MainThread]: 1699: static parser successfully parsed staging\stg_payments.sql
+[0m12:39:05.350239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6162C7910>]}
+[0m12:39:05.393528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61631B7D0>]}
+[0m12:39:05.395533 [info ] [MainThread]: Found 5 models, 20 tests, 0 snapshots, 0 analyses, 313 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:39:05.399537 [info ] [MainThread]: 
+[0m12:39:05.402042 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:39:05.405081 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_jaffle_shop'
+[0m12:39:05.424829 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop"
+[0m12:39:05.426841 [debug] [ThreadPool]: On list_jaffle_shop: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop"} */
+
+    
+    select schema_name
+    from information_schema.schemata
+  
+  
+[0m12:39:05.427841 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:39:05.446233 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:39:05.448230 [debug] [ThreadPool]: On list_jaffle_shop: Close
+[0m12:39:05.451857 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_jaffle_shop_main'
+[0m12:39:05.462283 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m12:39:05.463330 [debug] [ThreadPool]: On list_jaffle_shop_main: BEGIN
+[0m12:39:05.463330 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:39:05.465304 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:39:05.466309 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m12:39:05.466309 [debug] [ThreadPool]: On list_jaffle_shop_main: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop_main"} */
+select
+      'jaffle_shop' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from information_schema.tables
+    where table_schema = 'main'
+  
+[0m12:39:05.541612 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:39:05.544860 [debug] [ThreadPool]: On list_jaffle_shop_main: ROLLBACK
+[0m12:39:05.581652 [debug] [ThreadPool]: Failed to rollback 'list_jaffle_shop_main'
+[0m12:39:05.583198 [debug] [ThreadPool]: On list_jaffle_shop_main: Close
+[0m12:39:05.586267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61634A610>]}
+[0m12:39:05.588204 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:39:05.589861 [debug] [MainThread]: On master: BEGIN
+[0m12:39:05.590852 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:39:05.592454 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:39:05.594554 [debug] [MainThread]: On master: COMMIT
+[0m12:39:05.595569 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:39:05.596563 [debug] [MainThread]: On master: COMMIT
+[0m12:39:05.598558 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:39:05.599563 [debug] [MainThread]: On master: Close
+[0m12:39:05.602154 [info ] [MainThread]: Concurrency: 24 threads (target='dev')
+[0m12:39:05.603276 [info ] [MainThread]: 
+[0m12:39:05.731949 [debug] [Thread-1 (]: Began running node seed.jaffle_shop.raw_customers
+[0m12:39:05.733791 [debug] [Thread-2 (]: Began running node seed.jaffle_shop.raw_orders
+[0m12:39:05.734807 [debug] [Thread-3 (]: Began running node seed.jaffle_shop.raw_payments
+[0m12:39:05.737162 [info ] [Thread-1 (]: 1 of 28 START seed file main.raw_customers ..................................... [RUN]
+[0m12:39:05.739162 [info ] [Thread-2 (]: 2 of 28 START seed file main.raw_orders ........................................ [RUN]
+[0m12:39:05.740163 [info ] [Thread-3 (]: 3 of 28 START seed file main.raw_payments ...................................... [RUN]
+[0m12:39:05.743242 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.jaffle_shop.raw_customers'
+[0m12:39:05.746303 [debug] [Thread-2 (]: Acquiring new duckdb connection 'seed.jaffle_shop.raw_orders'
+[0m12:39:05.747356 [debug] [Thread-3 (]: Acquiring new duckdb connection 'seed.jaffle_shop.raw_payments'
+[0m12:39:05.748355 [debug] [Thread-1 (]: Began compiling node seed.jaffle_shop.raw_customers
+[0m12:39:05.750900 [debug] [Thread-2 (]: Began compiling node seed.jaffle_shop.raw_orders
+[0m12:39:05.752963 [debug] [Thread-3 (]: Began compiling node seed.jaffle_shop.raw_payments
+[0m12:39:05.755132 [debug] [Thread-1 (]: Timing info for seed.jaffle_shop.raw_customers (compile): 12:39:05.753977 => 12:39:05.753977
+[0m12:39:05.757646 [debug] [Thread-2 (]: Timing info for seed.jaffle_shop.raw_orders (compile): 12:39:05.756491 => 12:39:05.756491
+[0m12:39:05.758676 [debug] [Thread-3 (]: Timing info for seed.jaffle_shop.raw_payments (compile): 12:39:05.757646 => 12:39:05.757646
+[0m12:39:05.760103 [debug] [Thread-1 (]: Began executing node seed.jaffle_shop.raw_customers
+[0m12:39:05.762182 [debug] [Thread-2 (]: Began executing node seed.jaffle_shop.raw_orders
+[0m12:39:05.763211 [debug] [Thread-3 (]: Began executing node seed.jaffle_shop.raw_payments
+[0m12:39:05.869464 [debug] [Thread-1 (]: Using duckdb connection "seed.jaffle_shop.raw_customers"
+[0m12:39:05.873526 [debug] [Thread-2 (]: Using duckdb connection "seed.jaffle_shop.raw_orders"
+[0m12:39:05.880061 [debug] [Thread-1 (]: On seed.jaffle_shop.raw_customers: BEGIN
+[0m12:39:05.886124 [debug] [Thread-3 (]: Using duckdb connection "seed.jaffle_shop.raw_payments"
+[0m12:39:05.887123 [debug] [Thread-2 (]: On seed.jaffle_shop.raw_orders: BEGIN
+[0m12:39:05.888127 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:39:05.889702 [debug] [Thread-3 (]: On seed.jaffle_shop.raw_payments: BEGIN
+[0m12:39:05.891673 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:39:05.893199 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:39:05.894198 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m12:39:05.896210 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m12:39:05.897205 [debug] [Thread-1 (]: Using duckdb connection "seed.jaffle_shop.raw_customers"
+[0m12:39:05.899448 [debug] [Thread-2 (]: Using duckdb connection "seed.jaffle_shop.raw_orders"
+[0m12:39:05.900465 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m12:39:05.901981 [debug] [Thread-1 (]: On seed.jaffle_shop.raw_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "seed.jaffle_shop.raw_customers"} */
+
+    create table "jaffle_shop"."main"."raw_customers" ("id" integer,"first_name" text,"last_name" text)
+  
+[0m12:39:05.902490 [debug] [Thread-2 (]: On seed.jaffle_shop.raw_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "seed.jaffle_shop.raw_orders"} */
+
+    create table "jaffle_shop"."main"."raw_orders" ("id" integer,"user_id" integer,"order_date" date,"status" text)
+  
+[0m12:39:05.903747 [debug] [Thread-3 (]: Using duckdb connection "seed.jaffle_shop.raw_payments"
+[0m12:39:05.907387 [debug] [Thread-3 (]: On seed.jaffle_shop.raw_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "seed.jaffle_shop.raw_payments"} */
+
+    create table "jaffle_shop"."main"."raw_payments" ("id" integer,"order_id" integer,"payment_method" text,"amount" integer)
+  
+[0m12:39:05.909409 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:39:05.909409 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m12:39:05.921572 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.396265 [debug] [Thread-1 (]: Using duckdb connection "seed.jaffle_shop.raw_customers"
+[0m12:39:06.539097 [debug] [Thread-2 (]: Using duckdb connection "seed.jaffle_shop.raw_orders"
+[0m12:39:06.563298 [debug] [Thread-1 (]: On seed.jaffle_shop.raw_customers: 
+            insert into "jaffle_shop"."main"."raw_customers" ("id", "first_name", "last_name") values
+            (?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,...
+[0m12:39:06.640198 [debug] [Thread-2 (]: On seed.jaffle_shop.raw_orders: 
+            insert into "jaffle_shop"."main"."raw_orders" ("id", "user_id", "order_date", "status") values
+            (?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?...
+[0m12:39:06.674437 [debug] [Thread-3 (]: Using duckdb connection "seed.jaffle_shop.raw_payments"
+[0m12:39:06.676489 [debug] [Thread-3 (]: On seed.jaffle_shop.raw_payments: 
+            insert into "jaffle_shop"."main"."raw_payments" ("id", "order_id", "payment_method", "amount") values
+            (?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,?,?),(?,?,...
+[0m12:39:06.731388 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.751503 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.jaffle_shop.raw_orders"
+[0m12:39:06.753064 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.755083 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.758345 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.jaffle_shop.raw_payments"
+[0m12:39:06.760331 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.jaffle_shop.raw_customers"
+[0m12:39:06.820075 [debug] [Thread-3 (]: On seed.jaffle_shop.raw_payments: COMMIT
+[0m12:39:06.824997 [debug] [Thread-2 (]: On seed.jaffle_shop.raw_orders: COMMIT
+[0m12:39:06.830541 [debug] [Thread-1 (]: On seed.jaffle_shop.raw_customers: COMMIT
+[0m12:39:06.832254 [debug] [Thread-3 (]: Using duckdb connection "seed.jaffle_shop.raw_payments"
+[0m12:39:06.834271 [debug] [Thread-2 (]: Using duckdb connection "seed.jaffle_shop.raw_orders"
+[0m12:39:06.835704 [debug] [Thread-1 (]: Using duckdb connection "seed.jaffle_shop.raw_customers"
+[0m12:39:06.836724 [debug] [Thread-3 (]: On seed.jaffle_shop.raw_payments: COMMIT
+[0m12:39:06.838739 [debug] [Thread-2 (]: On seed.jaffle_shop.raw_orders: COMMIT
+[0m12:39:06.839723 [debug] [Thread-1 (]: On seed.jaffle_shop.raw_customers: COMMIT
+[0m12:39:06.866260 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.870240 [debug] [Thread-3 (]: Timing info for seed.jaffle_shop.raw_payments (execute): 12:39:05.849916 => 12:39:06.869245
+[0m12:39:06.871849 [debug] [Thread-3 (]: On seed.jaffle_shop.raw_payments: Close
+[0m12:39:06.874372 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61633FB50>]}
+[0m12:39:06.875460 [info ] [Thread-3 (]: 3 of 28 OK loaded seed file main.raw_payments .................................. [[32mINSERT 113[0m in 1.13s]
+[0m12:39:06.878460 [debug] [Thread-3 (]: Finished running node seed.jaffle_shop.raw_payments
+[0m12:39:06.880422 [debug] [Thread-5 (]: Began running node model.jaffle_shop.stg_payments
+[0m12:39:06.882287 [info ] [Thread-5 (]: 4 of 28 START sql view model main.stg_payments ................................. [RUN]
+[0m12:39:06.885318 [debug] [Thread-5 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_payments'
+[0m12:39:06.886348 [debug] [Thread-5 (]: Began compiling node model.jaffle_shop.stg_payments
+[0m12:39:06.894661 [debug] [Thread-5 (]: Writing injected SQL for node "model.jaffle_shop.stg_payments"
+[0m12:39:06.895655 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.899656 [debug] [Thread-2 (]: Timing info for seed.jaffle_shop.raw_orders (execute): 12:39:05.807298 => 12:39:06.899656
+[0m12:39:06.901647 [debug] [Thread-2 (]: On seed.jaffle_shop.raw_orders: Close
+[0m12:39:06.905453 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61648EDD0>]}
+[0m12:39:06.909472 [info ] [Thread-2 (]: 2 of 28 OK loaded seed file main.raw_orders .................................... [[32mINSERT 99[0m in 1.16s]
+[0m12:39:06.913591 [debug] [Thread-2 (]: Finished running node seed.jaffle_shop.raw_orders
+[0m12:39:06.915592 [debug] [Thread-5 (]: Timing info for model.jaffle_shop.stg_payments (compile): 12:39:06.888363 => 12:39:06.914601
+[0m12:39:06.916592 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:39:06.917589 [debug] [Thread-7 (]: Began running node model.jaffle_shop.stg_orders
+[0m12:39:06.919668 [debug] [Thread-5 (]: Began executing node model.jaffle_shop.stg_payments
+[0m12:39:06.922218 [debug] [Thread-1 (]: Timing info for seed.jaffle_shop.raw_customers (execute): 12:39:05.763211 => 12:39:06.922218
+[0m12:39:06.924668 [info ] [Thread-7 (]: 5 of 28 START sql view model main.stg_orders ................................... [RUN]
+[0m12:39:06.975204 [debug] [Thread-5 (]: Writing runtime sql for node "model.jaffle_shop.stg_payments"
+[0m12:39:06.976205 [debug] [Thread-1 (]: On seed.jaffle_shop.raw_customers: Close
+[0m12:39:06.978187 [debug] [Thread-7 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_orders'
+[0m12:39:06.980195 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C616518250>]}
+[0m12:39:06.980195 [debug] [Thread-7 (]: Began compiling node model.jaffle_shop.stg_orders
+[0m12:39:06.982264 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m12:39:06.983284 [info ] [Thread-1 (]: 1 of 28 OK loaded seed file main.raw_customers ................................. [[32mINSERT 100[0m in 1.24s]
+[0m12:39:06.988279 [debug] [Thread-7 (]: Writing injected SQL for node "model.jaffle_shop.stg_orders"
+[0m12:39:06.989844 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: BEGIN
+[0m12:39:06.992315 [debug] [Thread-1 (]: Finished running node seed.jaffle_shop.raw_customers
+[0m12:39:06.995380 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m12:39:06.998385 [debug] [Thread-7 (]: Timing info for model.jaffle_shop.stg_orders (compile): 12:39:06.984614 => 12:39:06.997412
+[0m12:39:07.003275 [debug] [Thread-9 (]: Began running node model.jaffle_shop.stg_customers
+[0m12:39:07.005274 [debug] [Thread-7 (]: Began executing node model.jaffle_shop.stg_orders
+[0m12:39:07.006086 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.023449 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m12:39:07.021928 [debug] [Thread-7 (]: Writing runtime sql for node "model.jaffle_shop.stg_orders"
+[0m12:39:07.007351 [info ] [Thread-9 (]: 6 of 28 START sql view model main.stg_customers ................................ [RUN]
+[0m12:39:07.024450 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+
+  
+  create view "jaffle_shop"."main"."stg_payments__dbt_tmp" as (
+    with source as (
+    select * from "jaffle_shop"."main"."raw_payments"
+
+),
+
+renamed as (
+
+    select
+        id as payment_id,
+        order_id,
+        payment_method,
+
+        -- `amount` is currently stored in cents, so we convert it to dollars
+        amount / 100 as amount
+
+    from source
+
+)
+
+select * from renamed
+  );
+
+[0m12:39:07.030716 [debug] [Thread-9 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_customers'
+[0m12:39:07.034262 [debug] [Thread-7 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m12:39:07.036779 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.037794 [debug] [Thread-9 (]: Began compiling node model.jaffle_shop.stg_customers
+[0m12:39:07.039792 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: BEGIN
+[0m12:39:07.059876 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m12:39:07.066931 [debug] [Thread-9 (]: Writing injected SQL for node "model.jaffle_shop.stg_customers"
+[0m12:39:07.067934 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m12:39:07.069933 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+alter view "jaffle_shop"."main"."stg_payments__dbt_tmp" rename to "stg_payments"
+[0m12:39:07.072979 [debug] [Thread-9 (]: Timing info for model.jaffle_shop.stg_customers (compile): 12:39:07.061392 => 12:39:07.071443
+[0m12:39:07.076994 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.079000 [debug] [Thread-9 (]: Began executing node model.jaffle_shop.stg_customers
+[0m12:39:07.079989 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.081441 [debug] [Thread-7 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m12:39:07.094064 [debug] [Thread-9 (]: Writing runtime sql for node "model.jaffle_shop.stg_customers"
+[0m12:39:07.097187 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: COMMIT
+[0m12:39:07.098188 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+
+  
+  create view "jaffle_shop"."main"."stg_orders__dbt_tmp" as (
+    with source as (
+    select * from "jaffle_shop"."main"."raw_orders"
+
+),
+
+renamed as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+
+    from source
+
+)
+
+select * from renamed
+  );
+
+[0m12:39:07.100186 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m12:39:07.101701 [debug] [Thread-9 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m12:39:07.103259 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: COMMIT
+[0m12:39:07.104258 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.106349 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: BEGIN
+[0m12:39:07.117218 [debug] [Thread-7 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m12:39:07.117218 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m12:39:07.118215 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+alter view "jaffle_shop"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m12:39:07.120214 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.120214 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.122337 [debug] [Thread-9 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m12:39:07.127350 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: COMMIT
+[0m12:39:07.128345 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+
+  
+  create view "jaffle_shop"."main"."stg_customers__dbt_tmp" as (
+    with source as (
+    select * from "jaffle_shop"."main"."raw_customers"
+
+),
+
+renamed as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from source
+
+)
+
+select * from renamed
+  );
+
+[0m12:39:07.129357 [debug] [Thread-7 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m12:39:07.131349 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: COMMIT
+[0m12:39:07.152291 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.162005 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m12:39:07.162532 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.163569 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+drop view if exists "jaffle_shop"."main"."stg_payments__dbt_backup" cascade
+[0m12:39:07.168559 [debug] [Thread-9 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m12:39:07.170567 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+alter view "jaffle_shop"."main"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m12:39:07.172579 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.178993 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: COMMIT
+[0m12:39:07.179992 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.181504 [debug] [Thread-9 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m12:39:07.182525 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.187117 [debug] [Thread-7 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m12:39:07.189117 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: COMMIT
+[0m12:39:07.193263 [debug] [Thread-5 (]: Timing info for model.jaffle_shop.stg_payments (execute): 12:39:06.927141 => 12:39:07.193263
+[0m12:39:07.194259 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+drop view if exists "jaffle_shop"."main"."stg_orders__dbt_backup" cascade
+[0m12:39:07.196267 [debug] [Thread-5 (]: On model.jaffle_shop.stg_payments: Close
+[0m12:39:07.199271 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C616260650>]}
+[0m12:39:07.200269 [info ] [Thread-5 (]: 4 of 28 OK created sql view model main.stg_payments ............................ [[32mOK[0m in 0.31s]
+[0m12:39:07.202338 [debug] [Thread-5 (]: Finished running node model.jaffle_shop.stg_payments
+[0m12:39:07.205356 [debug] [Thread-11 ]: Began running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:39:07.206358 [debug] [Thread-12 ]: Began running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:39:07.207353 [debug] [Thread-13 ]: Began running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:39:07.208361 [info ] [Thread-11 ]: 7 of 28 START test accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card  [RUN]
+[0m12:39:07.210351 [info ] [Thread-12 ]: 8 of 28 START test not_null_stg_payments_payment_id ............................ [RUN]
+[0m12:39:07.211361 [info ] [Thread-13 ]: 9 of 28 START test unique_stg_payments_payment_id .............................. [RUN]
+[0m12:39:07.214272 [debug] [Thread-11 ]: Acquiring new duckdb connection 'test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278'
+[0m12:39:07.215294 [debug] [Thread-12 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075'
+[0m12:39:07.217292 [debug] [Thread-13 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_stg_payments_payment_id.3744510712'
+[0m12:39:07.219316 [debug] [Thread-11 ]: Began compiling node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:39:07.220292 [debug] [Thread-12 ]: Began compiling node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:39:07.222352 [debug] [Thread-13 ]: Began compiling node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:39:07.223365 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.225370 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.239396 [debug] [Thread-11 ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m12:39:07.263385 [debug] [Thread-12 ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m12:39:07.278593 [debug] [Thread-13 ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m12:39:07.284585 [debug] [Thread-9 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m12:39:07.288650 [debug] [Thread-7 (]: Timing info for model.jaffle_shop.stg_orders (execute): 12:39:07.009349 => 12:39:07.287607
+[0m12:39:07.292296 [debug] [Thread-11 ]: Timing info for test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278 (compile): 12:39:07.226389 => 12:39:07.290158
+[0m12:39:07.294340 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+drop view if exists "jaffle_shop"."main"."stg_customers__dbt_backup" cascade
+[0m12:39:07.296355 [debug] [Thread-12 ]: Timing info for test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075 (compile): 12:39:07.241403 => 12:39:07.295338
+[0m12:39:07.297348 [debug] [Thread-13 ]: Timing info for test.jaffle_shop.unique_stg_payments_payment_id.3744510712 (compile): 12:39:07.264381 => 12:39:07.296355
+[0m12:39:07.298364 [debug] [Thread-7 (]: On model.jaffle_shop.stg_orders: Close
+[0m12:39:07.299349 [debug] [Thread-11 ]: Began executing node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:39:07.300348 [debug] [Thread-12 ]: Began executing node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:39:07.301864 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:07.302377 [debug] [Thread-13 ]: Began executing node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:39:07.305624 [debug] [Thread-7 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61655AAD0>]}
+[0m12:39:07.340829 [debug] [Thread-11 ]: Writing runtime sql for node "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m12:39:07.347601 [debug] [Thread-12 ]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m12:39:07.353649 [debug] [Thread-9 (]: Timing info for model.jaffle_shop.stg_customers (execute): 12:39:07.082966 => 12:39:07.352631
+[0m12:39:07.364204 [debug] [Thread-13 ]: Writing runtime sql for node "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m12:39:07.367199 [info ] [Thread-7 (]: 5 of 28 OK created sql view model main.stg_orders .............................. [[32mOK[0m in 0.33s]
+[0m12:39:07.371788 [debug] [Thread-9 (]: On model.jaffle_shop.stg_customers: Close
+[0m12:39:07.373313 [debug] [Thread-12 ]: Using duckdb connection "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m12:39:07.377333 [debug] [Thread-11 ]: Using duckdb connection "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m12:39:07.380325 [debug] [Thread-7 (]: Finished running node model.jaffle_shop.stg_orders
+[0m12:39:07.382367 [debug] [Thread-13 ]: Using duckdb connection "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m12:39:07.387379 [debug] [Thread-9 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6164E7B50>]}
+[0m12:39:07.390528 [debug] [Thread-12 ]: On test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075: BEGIN
+[0m12:39:07.393512 [debug] [Thread-11 ]: On test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278: BEGIN
+[0m12:39:07.398510 [debug] [Thread-15 ]: Began running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:39:07.400491 [debug] [Thread-13 ]: On test.jaffle_shop.unique_stg_payments_payment_id.3744510712: BEGIN
+[0m12:39:07.402610 [debug] [Thread-16 ]: Began running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:39:07.404549 [debug] [Thread-17 ]: Began running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:39:07.406549 [info ] [Thread-9 (]: 6 of 28 OK created sql view model main.stg_customers ........................... [[32mOK[0m in 0.36s]
+[0m12:39:07.410566 [debug] [Thread-12 ]: Opening a new connection, currently in state init
+[0m12:39:07.412636 [debug] [Thread-11 ]: Opening a new connection, currently in state init
+[0m12:39:07.414643 [info ] [Thread-15 ]: 10 of 28 START test accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned  [RUN]
+[0m12:39:07.418004 [debug] [Thread-13 ]: Opening a new connection, currently in state init
+[0m12:39:07.420582 [info ] [Thread-16 ]: 11 of 28 START test not_null_stg_orders_order_id ............................... [RUN]
+[0m12:39:07.424336 [info ] [Thread-17 ]: 12 of 28 START test unique_stg_orders_order_id ................................. [RUN]
+[0m12:39:07.428335 [debug] [Thread-9 (]: Finished running node model.jaffle_shop.stg_customers
+[0m12:39:07.431352 [debug] [Thread-12 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.434567 [debug] [Thread-11 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.437147 [debug] [Thread-15 ]: Acquiring new duckdb connection 'test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad'
+[0m12:39:07.440180 [debug] [Thread-13 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.444303 [debug] [Thread-16 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64'
+[0m12:39:07.447302 [debug] [Thread-17 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a'
+[0m12:39:07.451303 [debug] [Thread-19 ]: Began running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:39:07.453360 [debug] [Thread-20 ]: Began running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:39:07.456374 [debug] [Thread-12 ]: Using duckdb connection "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m12:39:07.458375 [debug] [Thread-11 ]: Using duckdb connection "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m12:39:07.461924 [debug] [Thread-15 ]: Began compiling node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:39:07.464468 [debug] [Thread-13 ]: Using duckdb connection "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m12:39:07.466464 [debug] [Thread-16 ]: Began compiling node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:39:07.469464 [debug] [Thread-17 ]: Began compiling node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:39:07.472488 [info ] [Thread-19 ]: 13 of 28 START test not_null_stg_customers_customer_id ......................... [RUN]
+[0m12:39:07.476593 [info ] [Thread-20 ]: 14 of 28 START test unique_stg_customers_customer_id ........................... [RUN]
+[0m12:39:07.479621 [debug] [Thread-12 ]: On test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select payment_id
+from "jaffle_shop"."main"."stg_payments"
+where payment_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.482271 [debug] [Thread-11 ]: On test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        payment_method as value_field,
+        count(*) as n_records
+
+    from "jaffle_shop"."main"."stg_payments"
+    group by payment_method
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'credit_card','coupon','bank_transfer','gift_card'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.519299 [debug] [Thread-15 ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m12:39:07.522345 [debug] [Thread-13 ]: On test.jaffle_shop.unique_stg_payments_payment_id.3744510712: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    payment_id as unique_field,
+    count(*) as n_records
+
+from "jaffle_shop"."main"."stg_payments"
+where payment_id is not null
+group by payment_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.536554 [debug] [Thread-16 ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m12:39:07.556152 [debug] [Thread-17 ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m12:39:07.561678 [debug] [Thread-19 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa'
+[0m12:39:07.565263 [debug] [Thread-20 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_stg_customers_customer_id.c7614daada'
+[0m12:39:07.573466 [debug] [Thread-15 ]: Timing info for test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad (compile): 12:39:07.484308 => 12:39:07.572441
+[0m12:39:07.577468 [debug] [Thread-16 ]: Timing info for test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64 (compile): 12:39:07.523362 => 12:39:07.576469
+[0m12:39:07.579479 [debug] [Thread-12 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.581469 [debug] [Thread-13 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.583578 [debug] [Thread-11 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.585084 [debug] [Thread-19 ]: Began compiling node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:39:07.588385 [debug] [Thread-17 ]: Timing info for test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a (compile): 12:39:07.538543 => 12:39:07.586378
+[0m12:39:07.590379 [debug] [Thread-20 ]: Began compiling node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:39:07.594300 [debug] [Thread-15 ]: Began executing node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:39:07.596345 [debug] [Thread-16 ]: Began executing node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:39:07.607657 [debug] [Thread-12 ]: Timing info for test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075 (execute): 12:39:07.342371 => 12:39:07.606629
+[0m12:39:07.614192 [debug] [Thread-13 ]: Timing info for test.jaffle_shop.unique_stg_payments_payment_id.3744510712 (execute): 12:39:07.355660 => 12:39:07.614192
+[0m12:39:07.620202 [debug] [Thread-11 ]: Timing info for test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278 (execute): 12:39:07.306401 => 12:39:07.619184
+[0m12:39:07.639463 [debug] [Thread-19 ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m12:39:07.642013 [debug] [Thread-17 ]: Began executing node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:39:07.658290 [debug] [Thread-20 ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m12:39:07.667800 [debug] [Thread-15 ]: Writing runtime sql for node "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m12:39:07.678869 [debug] [Thread-16 ]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m12:39:07.681401 [debug] [Thread-12 ]: On test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075: ROLLBACK
+[0m12:39:07.683946 [debug] [Thread-13 ]: On test.jaffle_shop.unique_stg_payments_payment_id.3744510712: ROLLBACK
+[0m12:39:07.685942 [debug] [Thread-11 ]: On test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278: ROLLBACK
+[0m12:39:07.702228 [debug] [Thread-17 ]: Writing runtime sql for node "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m12:39:07.706251 [debug] [Thread-19 ]: Timing info for test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa (compile): 12:39:07.622257 => 12:39:07.705247
+[0m12:39:07.712202 [debug] [Thread-20 ]: Timing info for test.jaffle_shop.unique_stg_customers_customer_id.c7614daada (compile): 12:39:07.643556 => 12:39:07.710263
+[0m12:39:07.715243 [debug] [Thread-15 ]: Using duckdb connection "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m12:39:07.718923 [debug] [Thread-12 ]: Failed to rollback 'test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075'
+[0m12:39:07.721429 [debug] [Thread-16 ]: Using duckdb connection "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m12:39:07.724981 [debug] [Thread-13 ]: Failed to rollback 'test.jaffle_shop.unique_stg_payments_payment_id.3744510712'
+[0m12:39:07.728004 [debug] [Thread-11 ]: Failed to rollback 'test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278'
+[0m12:39:07.731537 [debug] [Thread-19 ]: Began executing node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:39:07.734973 [debug] [Thread-20 ]: Began executing node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:39:07.736454 [debug] [Thread-17 ]: Using duckdb connection "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m12:39:07.739479 [debug] [Thread-15 ]: On test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad: BEGIN
+[0m12:39:07.742525 [debug] [Thread-12 ]: On test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075: Close
+[0m12:39:07.745550 [debug] [Thread-16 ]: On test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64: BEGIN
+[0m12:39:07.748547 [debug] [Thread-13 ]: On test.jaffle_shop.unique_stg_payments_payment_id.3744510712: Close
+[0m12:39:07.750561 [debug] [Thread-11 ]: On test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278: Close
+[0m12:39:07.761797 [debug] [Thread-19 ]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m12:39:07.860505 [debug] [Thread-20 ]: Writing runtime sql for node "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m12:39:07.863277 [debug] [Thread-17 ]: On test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a: BEGIN
+[0m12:39:07.865635 [debug] [Thread-15 ]: Opening a new connection, currently in state init
+[0m12:39:07.868863 [info ] [Thread-12 ]: 8 of 28 PASS not_null_stg_payments_payment_id .................................. [[32mPASS[0m in 0.65s]
+[0m12:39:07.872495 [debug] [Thread-16 ]: Opening a new connection, currently in state init
+[0m12:39:07.876071 [info ] [Thread-13 ]: 9 of 28 PASS unique_stg_payments_payment_id .................................... [[32mPASS[0m in 0.66s]
+[0m12:39:07.880077 [info ] [Thread-11 ]: 7 of 28 PASS accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card  [[32mPASS[0m in 0.67s]
+[0m12:39:07.886732 [debug] [Thread-17 ]: Opening a new connection, currently in state init
+[0m12:39:07.889732 [debug] [Thread-19 ]: Using duckdb connection "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m12:39:07.892333 [debug] [Thread-20 ]: Using duckdb connection "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m12:39:07.896364 [debug] [Thread-12 ]: Finished running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:39:07.899359 [debug] [Thread-15 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.904379 [debug] [Thread-13 ]: Finished running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:39:07.909429 [debug] [Thread-11 ]: Finished running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:39:07.912450 [debug] [Thread-16 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.915468 [debug] [Thread-17 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.917461 [debug] [Thread-19 ]: On test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa: BEGIN
+[0m12:39:07.919464 [debug] [Thread-20 ]: On test.jaffle_shop.unique_stg_customers_customer_id.c7614daada: BEGIN
+[0m12:39:07.922508 [debug] [Thread-15 ]: Using duckdb connection "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m12:39:07.927533 [debug] [Thread-16 ]: Using duckdb connection "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m12:39:07.929507 [debug] [Thread-17 ]: Using duckdb connection "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m12:39:07.932616 [debug] [Thread-19 ]: Opening a new connection, currently in state init
+[0m12:39:07.934585 [debug] [Thread-20 ]: Opening a new connection, currently in state init
+[0m12:39:07.937602 [debug] [Thread-15 ]: On test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "jaffle_shop"."main"."stg_orders"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','return_pending','returned'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.939596 [debug] [Thread-16 ]: On test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from "jaffle_shop"."main"."stg_orders"
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.941601 [debug] [Thread-17 ]: On test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "jaffle_shop"."main"."stg_orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.945530 [debug] [Thread-19 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.947548 [debug] [Thread-20 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.952569 [debug] [Thread-19 ]: Using duckdb connection "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m12:39:07.956607 [debug] [Thread-20 ]: Using duckdb connection "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m12:39:07.958607 [debug] [Thread-16 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.960781 [debug] [Thread-17 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.963324 [debug] [Thread-15 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.964322 [debug] [Thread-19 ]: On test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "jaffle_shop"."main"."stg_customers"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.965893 [debug] [Thread-20 ]: On test.jaffle_shop.unique_stg_customers_customer_id.c7614daada: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "jaffle_shop"."main"."stg_customers"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:07.972976 [debug] [Thread-16 ]: Timing info for test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64 (execute): 12:39:07.668834 => 12:39:07.972447
+[0m12:39:07.978990 [debug] [Thread-17 ]: Timing info for test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a (execute): 12:39:07.688942 => 12:39:07.978003
+[0m12:39:07.984670 [debug] [Thread-15 ]: Timing info for test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad (execute): 12:39:07.660285 => 12:39:07.983664
+[0m12:39:07.988668 [debug] [Thread-16 ]: On test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64: ROLLBACK
+[0m12:39:07.991705 [debug] [Thread-17 ]: On test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a: ROLLBACK
+[0m12:39:07.993251 [debug] [Thread-20 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.995256 [debug] [Thread-19 ]: SQL status: OK in 0.0 seconds
+[0m12:39:07.996253 [debug] [Thread-15 ]: On test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad: ROLLBACK
+[0m12:39:07.999257 [debug] [Thread-16 ]: Failed to rollback 'test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64'
+[0m12:39:08.002450 [debug] [Thread-17 ]: Failed to rollback 'test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a'
+[0m12:39:08.009475 [debug] [Thread-20 ]: Timing info for test.jaffle_shop.unique_stg_customers_customer_id.c7614daada (execute): 12:39:07.763369 => 12:39:08.008486
+[0m12:39:08.015766 [debug] [Thread-19 ]: Timing info for test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa (execute): 12:39:07.752611 => 12:39:08.015209
+[0m12:39:08.018786 [debug] [Thread-15 ]: Failed to rollback 'test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad'
+[0m12:39:08.020780 [debug] [Thread-16 ]: On test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64: Close
+[0m12:39:08.022293 [debug] [Thread-17 ]: On test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a: Close
+[0m12:39:08.024321 [debug] [Thread-20 ]: On test.jaffle_shop.unique_stg_customers_customer_id.c7614daada: ROLLBACK
+[0m12:39:08.026351 [debug] [Thread-19 ]: On test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa: ROLLBACK
+[0m12:39:08.029341 [debug] [Thread-15 ]: On test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad: Close
+[0m12:39:08.033425 [info ] [Thread-16 ]: 11 of 28 PASS not_null_stg_orders_order_id ..................................... [[32mPASS[0m in 0.59s]
+[0m12:39:08.037231 [info ] [Thread-17 ]: 12 of 28 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.59s]
+[0m12:39:08.041751 [debug] [Thread-20 ]: Failed to rollback 'test.jaffle_shop.unique_stg_customers_customer_id.c7614daada'
+[0m12:39:08.044314 [debug] [Thread-19 ]: Failed to rollback 'test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa'
+[0m12:39:08.047322 [info ] [Thread-15 ]: 10 of 28 PASS accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned  [[32mPASS[0m in 0.61s]
+[0m12:39:08.050320 [debug] [Thread-16 ]: Finished running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:39:08.052398 [debug] [Thread-17 ]: Finished running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:39:08.054543 [debug] [Thread-20 ]: On test.jaffle_shop.unique_stg_customers_customer_id.c7614daada: Close
+[0m12:39:08.057584 [debug] [Thread-19 ]: On test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa: Close
+[0m12:39:08.061777 [debug] [Thread-15 ]: Finished running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:39:08.068365 [info ] [Thread-20 ]: 14 of 28 PASS unique_stg_customers_customer_id ................................. [[32mPASS[0m in 0.50s]
+[0m12:39:08.071878 [info ] [Thread-19 ]: 13 of 28 PASS not_null_stg_customers_customer_id ............................... [[32mPASS[0m in 0.51s]
+[0m12:39:08.076503 [debug] [Thread-22 ]: Began running node model.jaffle_shop.orders
+[0m12:39:08.079527 [debug] [Thread-20 ]: Finished running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:39:08.083328 [debug] [Thread-19 ]: Finished running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:39:08.085339 [info ] [Thread-22 ]: 15 of 28 START sql table model main.orders ..................................... [RUN]
+[0m12:39:08.093144 [debug] [Thread-24 ]: Began running node model.jaffle_shop.customers
+[0m12:39:08.097718 [debug] [Thread-22 ]: Acquiring new duckdb connection 'model.jaffle_shop.orders'
+[0m12:39:08.101421 [info ] [Thread-24 ]: 16 of 28 START sql table model main.customers .................................. [RUN]
+[0m12:39:08.105086 [debug] [Thread-22 ]: Began compiling node model.jaffle_shop.orders
+[0m12:39:08.109607 [debug] [Thread-24 ]: Acquiring new duckdb connection 'model.jaffle_shop.customers'
+[0m12:39:08.127453 [debug] [Thread-22 ]: Writing injected SQL for node "model.jaffle_shop.orders"
+[0m12:39:08.129454 [debug] [Thread-24 ]: Began compiling node model.jaffle_shop.customers
+[0m12:39:08.149103 [debug] [Thread-24 ]: Writing injected SQL for node "model.jaffle_shop.customers"
+[0m12:39:08.152175 [debug] [Thread-22 ]: Timing info for model.jaffle_shop.orders (compile): 12:39:08.110603 => 12:39:08.150121
+[0m12:39:08.155195 [debug] [Thread-22 ]: Began executing node model.jaffle_shop.orders
+[0m12:39:08.166244 [debug] [Thread-24 ]: Timing info for model.jaffle_shop.customers (compile): 12:39:08.131973 => 12:39:08.165221
+[0m12:39:08.231477 [debug] [Thread-24 ]: Began executing node model.jaffle_shop.customers
+[0m12:39:08.258334 [debug] [Thread-22 ]: Writing runtime sql for node "model.jaffle_shop.orders"
+[0m12:39:08.273439 [debug] [Thread-24 ]: Writing runtime sql for node "model.jaffle_shop.customers"
+[0m12:39:08.278436 [debug] [Thread-22 ]: Using duckdb connection "model.jaffle_shop.orders"
+[0m12:39:08.285318 [debug] [Thread-24 ]: Using duckdb connection "model.jaffle_shop.customers"
+[0m12:39:08.286862 [debug] [Thread-22 ]: On model.jaffle_shop.orders: BEGIN
+[0m12:39:08.289135 [debug] [Thread-24 ]: On model.jaffle_shop.customers: BEGIN
+[0m12:39:08.290200 [debug] [Thread-22 ]: Opening a new connection, currently in state init
+[0m12:39:08.292328 [debug] [Thread-24 ]: Opening a new connection, currently in state init
+[0m12:39:08.293903 [debug] [Thread-22 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.296115 [debug] [Thread-24 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.297184 [debug] [Thread-22 ]: Using duckdb connection "model.jaffle_shop.orders"
+[0m12:39:08.299344 [debug] [Thread-24 ]: Using duckdb connection "model.jaffle_shop.customers"
+[0m12:39:08.302434 [debug] [Thread-22 ]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+
+  
+    
+    
+
+    create  table
+      "jaffle_shop"."main"."orders__dbt_tmp"
+  
+    as (
+      
+
+with orders as (
+
+    select * from "jaffle_shop"."main"."stg_orders"
+
+),
+
+payments as (
+
+    select * from "jaffle_shop"."main"."stg_payments"
+
+),
+
+order_payments as (
+
+    select
+        order_id,
+
+        sum(case when payment_method = 'credit_card' then amount else 0 end) as credit_card_amount,
+        sum(case when payment_method = 'coupon' then amount else 0 end) as coupon_amount,
+        sum(case when payment_method = 'bank_transfer' then amount else 0 end) as bank_transfer_amount,
+        sum(case when payment_method = 'gift_card' then amount else 0 end) as gift_card_amount,
+        sum(amount) as total_amount
+
+    from payments
+
+    group by order_id
+
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        orders.status,
+
+        order_payments.credit_card_amount,
+
+        order_payments.coupon_amount,
+
+        order_payments.bank_transfer_amount,
+
+        order_payments.gift_card_amount,
+
+        order_payments.total_amount as amount
+
+    from orders
+
+
+    left join order_payments
+        on orders.order_id = order_payments.order_id
+
+)
+
+select * from final
+    );
+  
+  
+[0m12:39:08.304447 [debug] [Thread-24 ]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+
+  
+    
+    
+
+    create  table
+      "jaffle_shop"."main"."customers__dbt_tmp"
+  
+    as (
+      with customers as (
+
+    select * from "jaffle_shop"."main"."stg_customers"
+
+),
+
+orders as (
+
+    select * from "jaffle_shop"."main"."stg_orders"
+
+),
+
+payments as (
+
+    select * from "jaffle_shop"."main"."stg_payments"
+
+),
+
+customer_orders as (
+
+        select
+        customer_id,
+
+        min(order_date) as first_order,
+        max(order_date) as most_recent_order,
+        count(order_id) as number_of_orders
+    from orders
+
+    group by customer_id
+
+),
+
+customer_payments as (
+
+    select
+        orders.customer_id,
+        sum(amount) as total_amount
+
+    from payments
+
+    left join orders on
+         payments.order_id = orders.order_id
+
+    group by orders.customer_id
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order,
+        customer_orders.most_recent_order,
+        customer_orders.number_of_orders,
+        customer_payments.total_amount as customer_lifetime_value
+
+    from customers
+
+    left join customer_orders
+        on customers.customer_id = customer_orders.customer_id
+
+    left join customer_payments
+        on  customers.customer_id = customer_payments.customer_id
+
+)
+
+select * from final
+    );
+  
+  
+[0m12:39:08.322613 [debug] [Thread-24 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.342693 [debug] [Thread-24 ]: Using duckdb connection "model.jaffle_shop.customers"
+[0m12:39:08.344984 [debug] [Thread-22 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.348498 [debug] [Thread-24 ]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+alter table "jaffle_shop"."main"."customers__dbt_tmp" rename to "customers"
+[0m12:39:08.360889 [debug] [Thread-22 ]: Using duckdb connection "model.jaffle_shop.orders"
+[0m12:39:08.364459 [debug] [Thread-22 ]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+alter table "jaffle_shop"."main"."orders__dbt_tmp" rename to "orders"
+[0m12:39:08.366481 [debug] [Thread-24 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.381493 [debug] [Thread-24 ]: On model.jaffle_shop.customers: COMMIT
+[0m12:39:08.383506 [debug] [Thread-24 ]: Using duckdb connection "model.jaffle_shop.customers"
+[0m12:39:08.385517 [debug] [Thread-22 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.388514 [debug] [Thread-24 ]: On model.jaffle_shop.customers: COMMIT
+[0m12:39:08.395703 [debug] [Thread-22 ]: On model.jaffle_shop.orders: COMMIT
+[0m12:39:08.398813 [debug] [Thread-22 ]: Using duckdb connection "model.jaffle_shop.orders"
+[0m12:39:08.400835 [debug] [Thread-22 ]: On model.jaffle_shop.orders: COMMIT
+[0m12:39:08.451507 [debug] [Thread-24 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.464339 [debug] [Thread-24 ]: Using duckdb connection "model.jaffle_shop.customers"
+[0m12:39:08.475464 [debug] [Thread-22 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.477478 [debug] [Thread-24 ]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+drop table if exists "jaffle_shop"."main"."customers__dbt_backup" cascade
+[0m12:39:08.490059 [debug] [Thread-22 ]: Using duckdb connection "model.jaffle_shop.orders"
+[0m12:39:08.494535 [debug] [Thread-22 ]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+drop table if exists "jaffle_shop"."main"."orders__dbt_backup" cascade
+[0m12:39:08.499552 [debug] [Thread-22 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.497544 [debug] [Thread-24 ]: SQL status: OK in 0.0 seconds
+[0m12:39:08.510602 [debug] [Thread-22 ]: Timing info for model.jaffle_shop.orders (execute): 12:39:08.157191 => 12:39:08.508607
+[0m12:39:08.515958 [debug] [Thread-24 ]: Timing info for model.jaffle_shop.customers (execute): 12:39:08.259334 => 12:39:08.514938
+[0m12:39:08.518961 [debug] [Thread-22 ]: On model.jaffle_shop.orders: Close
+[0m12:39:08.521486 [debug] [Thread-24 ]: On model.jaffle_shop.customers: Close
+[0m12:39:08.528053 [debug] [Thread-22 ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61624D610>]}
+[0m12:39:08.531568 [debug] [Thread-24 ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8439ace-09c4-46d7-9630-f50ecb193d7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C61634BB50>]}
+[0m12:39:08.535118 [info ] [Thread-22 ]: 15 of 28 OK created sql table model main.orders ................................ [[32mOK[0m in 0.43s]
+[0m12:39:08.543269 [debug] [Thread-22 ]: Finished running node model.jaffle_shop.orders
+[0m12:39:08.540132 [info ] [Thread-24 ]: 16 of 28 OK created sql table model main.customers ............................. [[32mOK[0m in 0.42s]
+[0m12:39:08.548425 [debug] [Thread-3 (]: Began running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:39:08.552521 [debug] [Thread-6 (]: Began running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:39:08.554495 [debug] [Thread-2 (]: Began running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:39:08.556534 [debug] [Thread-8 (]: Began running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:39:08.560525 [debug] [Thread-24 ]: Finished running node model.jaffle_shop.customers
+[0m12:39:08.563074 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:39:08.565086 [debug] [Thread-10 ]: Began running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:39:08.569183 [debug] [Thread-5 (]: Began running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:39:08.571708 [debug] [Thread-14 ]: Began running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:39:08.573256 [debug] [Thread-7 (]: Began running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:39:08.574243 [info ] [Thread-3 (]: 17 of 28 START test accepted_values_orders_status__placed__shipped__completed__return_pending__returned  [RUN]
+[0m12:39:08.578850 [info ] [Thread-6 (]: 18 of 28 START test not_null_orders_amount ..................................... [RUN]
+[0m12:39:08.581849 [info ] [Thread-2 (]: 19 of 28 START test not_null_orders_bank_transfer_amount ....................... [RUN]
+[0m12:39:08.585386 [info ] [Thread-8 (]: 20 of 28 START test not_null_orders_coupon_amount .............................. [RUN]
+[0m12:39:08.592625 [debug] [Thread-9 (]: Began running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:39:08.594589 [debug] [Thread-21 ]: Began running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:39:08.597616 [debug] [Thread-12 ]: Began running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:39:08.595593 [info ] [Thread-1 (]: 21 of 28 START test not_null_orders_credit_card_amount ......................... [RUN]
+[0m12:39:08.602139 [info ] [Thread-10 ]: 22 of 28 START test not_null_orders_customer_id ................................ [RUN]
+[0m12:39:08.609160 [info ] [Thread-5 (]: 23 of 28 START test not_null_orders_gift_card_amount ........................... [RUN]
+[0m12:39:08.612234 [info ] [Thread-14 ]: 24 of 28 START test not_null_orders_order_id ................................... [RUN]
+[0m12:39:08.616259 [info ] [Thread-7 (]: 25 of 28 START test unique_orders_order_id ..................................... [RUN]
+[0m12:39:08.621015 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly seed.jaffle_shop.raw_payments, now test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3)
+[0m12:39:08.625964 [debug] [Thread-6 (]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_amount.106140f9fd'
+[0m12:39:08.629191 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.jaffle_shop.raw_orders, now test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49)
+[0m12:39:08.634251 [debug] [Thread-8 (]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625'
+[0m12:39:08.637256 [info ] [Thread-9 (]: 26 of 28 START test not_null_customers_customer_id ............................. [RUN]
+[0m12:39:08.640364 [info ] [Thread-21 ]: 27 of 28 START test relationships_orders_customer_id__customer_id__ref_customers_  [RUN]
+[0m12:39:08.644049 [info ] [Thread-12 ]: 28 of 28 START test unique_customers_customer_id ............................... [RUN]
+[0m12:39:08.647518 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.jaffle_shop.raw_customers, now test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59)
+[0m12:39:08.650712 [debug] [Thread-10 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_customer_id.c5f02694af'
+[0m12:39:08.654233 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.stg_payments, now test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a)
+[0m12:39:08.659418 [debug] [Thread-14 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_order_id.cf6c17daed'
+[0m12:39:08.663497 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.stg_orders, now test.jaffle_shop.unique_orders_order_id.fed79b3a6e)
+[0m12:39:08.664963 [debug] [Thread-3 (]: Began compiling node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:39:08.667315 [debug] [Thread-6 (]: Began compiling node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:39:08.669311 [debug] [Thread-2 (]: Began compiling node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:39:08.673378 [debug] [Thread-8 (]: Began compiling node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:39:08.676069 [debug] [Thread-9 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.stg_customers, now test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d)
+[0m12:39:08.680295 [debug] [Thread-21 ]: Acquiring new duckdb connection 'test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2'
+[0m12:39:08.683468 [debug] [Thread-12 ]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075, now test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1)
+[0m12:39:08.683468 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:39:08.686936 [debug] [Thread-10 ]: Began compiling node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:39:08.688943 [debug] [Thread-5 (]: Began compiling node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:39:08.692500 [debug] [Thread-14 ]: Began compiling node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:39:08.694862 [debug] [Thread-7 (]: Began compiling node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:39:08.719760 [debug] [Thread-3 (]: Writing injected SQL for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m12:39:08.738384 [debug] [Thread-6 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m12:39:08.758804 [debug] [Thread-2 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m12:39:08.778930 [debug] [Thread-8 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m12:39:08.779934 [debug] [Thread-9 (]: Began compiling node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:39:08.783533 [debug] [Thread-21 ]: Began compiling node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:39:08.785537 [debug] [Thread-12 ]: Began compiling node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:39:08.805739 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m12:39:08.825062 [debug] [Thread-10 ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m12:39:08.841650 [debug] [Thread-5 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m12:39:08.857546 [debug] [Thread-14 ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m12:39:08.874236 [debug] [Thread-7 (]: Writing injected SQL for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m12:39:08.879238 [debug] [Thread-6 (]: Timing info for test.jaffle_shop.not_null_orders_amount.106140f9fd (compile): 12:39:08.721764 => 12:39:08.878242
+[0m12:39:08.883323 [debug] [Thread-2 (]: Timing info for test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49 (compile): 12:39:08.740524 => 12:39:08.881765
+[0m12:39:08.885369 [debug] [Thread-3 (]: Timing info for test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3 (compile): 12:39:08.696904 => 12:39:08.884364
+[0m12:39:08.899477 [debug] [Thread-8 (]: Timing info for test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625 (compile): 12:39:08.760807 => 12:39:08.898575
+[0m12:39:08.908511 [debug] [Thread-9 (]: Writing injected SQL for node "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m12:39:08.926181 [debug] [Thread-21 ]: Writing injected SQL for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m12:39:08.943338 [debug] [Thread-12 ]: Writing injected SQL for node "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m12:39:08.949457 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59 (compile): 12:39:08.787536 => 12:39:08.948450
+[0m12:39:08.954877 [debug] [Thread-5 (]: Timing info for test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a (compile): 12:39:08.826057 => 12:39:08.952631
+[0m12:39:08.957896 [debug] [Thread-10 ]: Timing info for test.jaffle_shop.not_null_orders_customer_id.c5f02694af (compile): 12:39:08.807740 => 12:39:08.956900
+[0m12:39:08.960903 [debug] [Thread-14 ]: Timing info for test.jaffle_shop.not_null_orders_order_id.cf6c17daed (compile): 12:39:08.843214 => 12:39:08.959893
+[0m12:39:08.966924 [debug] [Thread-6 (]: Began executing node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:39:08.969123 [debug] [Thread-2 (]: Began executing node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:39:08.971532 [debug] [Thread-7 (]: Timing info for test.jaffle_shop.unique_orders_order_id.fed79b3a6e (compile): 12:39:08.858549 => 12:39:08.970131
+[0m12:39:08.974221 [debug] [Thread-3 (]: Began executing node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:39:08.976990 [debug] [Thread-8 (]: Began executing node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:39:08.982370 [debug] [Thread-9 (]: Timing info for test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d (compile): 12:39:08.888407 => 12:39:08.981805
+[0m12:39:08.984384 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:39:08.986382 [debug] [Thread-5 (]: Began executing node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:39:08.988385 [debug] [Thread-10 ]: Began executing node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:39:08.990384 [debug] [Thread-14 ]: Began executing node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:39:09.002578 [debug] [Thread-6 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m12:39:09.004647 [debug] [Thread-21 ]: Timing info for test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2 (compile): 12:39:08.909513 => 12:39:09.003649
+[0m12:39:09.019237 [debug] [Thread-2 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m12:39:09.022986 [debug] [Thread-12 ]: Timing info for test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1 (compile): 12:39:08.928176 => 12:39:09.021944
+[0m12:39:09.026018 [debug] [Thread-7 (]: Began executing node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:39:09.034654 [debug] [Thread-3 (]: Writing runtime sql for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m12:39:09.046470 [debug] [Thread-8 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m12:39:09.049462 [debug] [Thread-9 (]: Began executing node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:39:09.058867 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m12:39:09.074778 [debug] [Thread-5 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m12:39:09.084242 [debug] [Thread-10 ]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m12:39:09.095226 [debug] [Thread-14 ]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m12:39:09.097788 [debug] [Thread-21 ]: Began executing node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:39:09.102289 [debug] [Thread-12 ]: Began executing node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:39:09.104312 [debug] [Thread-6 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m12:39:09.119442 [debug] [Thread-7 (]: Writing runtime sql for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m12:39:09.120442 [debug] [Thread-2 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m12:39:09.130085 [debug] [Thread-9 (]: Writing runtime sql for node "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m12:39:09.133300 [debug] [Thread-3 (]: Using duckdb connection "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m12:39:09.137309 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m12:39:09.139324 [debug] [Thread-8 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m12:39:09.140314 [debug] [Thread-5 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m12:39:09.152020 [debug] [Thread-21 ]: Writing runtime sql for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m12:39:09.154755 [debug] [Thread-10 ]: Using duckdb connection "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m12:39:09.155780 [debug] [Thread-14 ]: Using duckdb connection "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m12:39:09.167447 [debug] [Thread-12 ]: Writing runtime sql for node "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m12:39:09.170545 [debug] [Thread-6 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: BEGIN
+[0m12:39:09.173719 [debug] [Thread-2 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: BEGIN
+[0m12:39:09.176737 [debug] [Thread-7 (]: Using duckdb connection "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m12:39:09.178734 [debug] [Thread-3 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3: BEGIN
+[0m12:39:09.180737 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: BEGIN
+[0m12:39:09.183277 [debug] [Thread-9 (]: Using duckdb connection "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m12:39:09.186325 [debug] [Thread-8 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: BEGIN
+[0m12:39:09.189332 [debug] [Thread-5 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: BEGIN
+[0m12:39:09.192467 [debug] [Thread-10 ]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: BEGIN
+[0m12:39:09.194413 [debug] [Thread-14 ]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: BEGIN
+[0m12:39:09.196433 [debug] [Thread-21 ]: Using duckdb connection "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m12:39:09.200437 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m12:39:09.203500 [debug] [Thread-12 ]: Using duckdb connection "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m12:39:09.205449 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m12:39:09.207719 [debug] [Thread-7 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: BEGIN
+[0m12:39:09.210716 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m12:39:09.213265 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:39:09.215256 [debug] [Thread-9 (]: On test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d: BEGIN
+[0m12:39:09.219253 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m12:39:09.221800 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m12:39:09.224399 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m12:39:09.226468 [debug] [Thread-14 ]: Opening a new connection, currently in state init
+[0m12:39:09.228461 [debug] [Thread-21 ]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: BEGIN
+[0m12:39:09.232233 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.234259 [debug] [Thread-12 ]: On test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1: BEGIN
+[0m12:39:09.236249 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m12:39:09.238253 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.240252 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.243329 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.245582 [debug] [Thread-9 (]: Opening a new connection, currently in state closed
+[0m12:39:09.248594 [debug] [Thread-8 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.250596 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.252398 [debug] [Thread-10 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.254710 [debug] [Thread-14 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.256718 [debug] [Thread-21 ]: Opening a new connection, currently in state init
+[0m12:39:09.258703 [debug] [Thread-6 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m12:39:09.260700 [debug] [Thread-12 ]: Opening a new connection, currently in state closed
+[0m12:39:09.264239 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.266359 [debug] [Thread-2 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m12:39:09.268350 [debug] [Thread-3 (]: Using duckdb connection "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m12:39:09.270373 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m12:39:09.272507 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.274520 [debug] [Thread-8 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m12:39:09.275537 [debug] [Thread-5 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m12:39:09.277526 [debug] [Thread-10 ]: Using duckdb connection "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m12:39:09.279518 [debug] [Thread-14 ]: Using duckdb connection "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m12:39:09.282170 [debug] [Thread-21 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.284184 [debug] [Thread-6 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_amount.106140f9fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select amount
+from "jaffle_shop"."main"."orders"
+where amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.287203 [debug] [Thread-12 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.288217 [debug] [Thread-7 (]: Using duckdb connection "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m12:39:09.290213 [debug] [Thread-2 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select bank_transfer_amount
+from "jaffle_shop"."main"."orders"
+where bank_transfer_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.293301 [debug] [Thread-3 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "jaffle_shop"."main"."orders"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','return_pending','returned'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.295378 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select credit_card_amount
+from "jaffle_shop"."main"."orders"
+where credit_card_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.297394 [debug] [Thread-9 (]: Using duckdb connection "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m12:39:09.299400 [debug] [Thread-8 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select coupon_amount
+from "jaffle_shop"."main"."orders"
+where coupon_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.302608 [debug] [Thread-5 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select gift_card_amount
+from "jaffle_shop"."main"."orders"
+where gift_card_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.305478 [debug] [Thread-10 ]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "jaffle_shop"."main"."orders"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.307452 [debug] [Thread-14 ]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from "jaffle_shop"."main"."orders"
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.310472 [debug] [Thread-21 ]: Using duckdb connection "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m12:39:09.313527 [debug] [Thread-12 ]: Using duckdb connection "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m12:39:09.315538 [debug] [Thread-7 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "jaffle_shop"."main"."orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.317871 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.322383 [debug] [Thread-9 (]: On test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "jaffle_shop"."main"."customers"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.324406 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.326409 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.329445 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.333714 [debug] [Thread-8 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.336302 [debug] [Thread-21 ]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from "jaffle_shop"."main"."orders"
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from "jaffle_shop"."main"."customers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.338928 [debug] [Thread-10 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.339930 [debug] [Thread-12 ]: On test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "jaffle_shop"."main"."customers"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:39:09.342468 [debug] [Thread-14 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.344581 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.355142 [debug] [Thread-6 (]: Timing info for test.jaffle_shop.not_null_orders_amount.106140f9fd (execute): 12:39:08.992502 => 12:39:09.353128
+[0m12:39:09.363416 [debug] [Thread-2 (]: Timing info for test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49 (execute): 12:39:09.006657 => 12:39:09.361859
+[0m12:39:09.365406 [debug] [Thread-7 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.367422 [debug] [Thread-9 (]: SQL status: OK in 0.0 seconds
+[0m12:39:09.372480 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59 (execute): 12:39:09.051473 => 12:39:09.371933
+[0m12:39:09.377097 [debug] [Thread-3 (]: Timing info for test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3 (execute): 12:39:09.028013 => 12:39:09.377097
+[0m12:39:09.386971 [debug] [Thread-8 (]: Timing info for test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625 (execute): 12:39:09.036653 => 12:39:09.385890
+[0m12:39:09.393873 [debug] [Thread-10 ]: Timing info for test.jaffle_shop.not_null_orders_customer_id.c5f02694af (execute): 12:39:09.076802 => 12:39:09.393873
+[0m12:39:09.401995 [debug] [Thread-14 ]: Timing info for test.jaffle_shop.not_null_orders_order_id.cf6c17daed (execute): 12:39:09.086284 => 12:39:09.400438
+[0m12:39:09.403538 [debug] [Thread-21 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.404534 [debug] [Thread-12 ]: SQL status: OK in 0.0 seconds
+[0m12:39:09.410537 [debug] [Thread-5 (]: Timing info for test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a (execute): 12:39:09.060880 => 12:39:09.409545
+[0m12:39:09.413588 [debug] [Thread-6 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: ROLLBACK
+[0m12:39:09.415593 [debug] [Thread-2 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: ROLLBACK
+[0m12:39:09.422607 [debug] [Thread-7 (]: Timing info for test.jaffle_shop.unique_orders_order_id.fed79b3a6e (execute): 12:39:09.105339 => 12:39:09.422098
+[0m12:39:09.429169 [debug] [Thread-9 (]: Timing info for test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d (execute): 12:39:09.124083 => 12:39:09.428181
+[0m12:39:09.430166 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: ROLLBACK
+[0m12:39:09.433223 [debug] [Thread-3 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3: ROLLBACK
+[0m12:39:09.435229 [debug] [Thread-8 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: ROLLBACK
+[0m12:39:09.437792 [debug] [Thread-10 ]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: ROLLBACK
+[0m12:39:09.439791 [debug] [Thread-14 ]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: ROLLBACK
+[0m12:39:09.446500 [debug] [Thread-21 ]: Timing info for test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2 (execute): 12:39:09.144440 => 12:39:09.445484
+[0m12:39:09.453540 [debug] [Thread-12 ]: Timing info for test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1 (execute): 12:39:09.157783 => 12:39:09.452011
+[0m12:39:09.454543 [debug] [Thread-5 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: ROLLBACK
+[0m12:39:09.457549 [debug] [Thread-6 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_amount.106140f9fd'
+[0m12:39:09.461587 [debug] [Thread-2 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49'
+[0m12:39:09.462543 [debug] [Thread-7 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: ROLLBACK
+[0m12:39:09.466141 [debug] [Thread-9 (]: On test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d: ROLLBACK
+[0m12:39:09.469160 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59'
+[0m12:39:09.472203 [debug] [Thread-3 (]: Failed to rollback 'test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3'
+[0m12:39:09.474451 [debug] [Thread-8 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625'
+[0m12:39:09.476968 [debug] [Thread-10 ]: Failed to rollback 'test.jaffle_shop.not_null_orders_customer_id.c5f02694af'
+[0m12:39:09.478962 [debug] [Thread-14 ]: Failed to rollback 'test.jaffle_shop.not_null_orders_order_id.cf6c17daed'
+[0m12:39:09.481478 [debug] [Thread-21 ]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: ROLLBACK
+[0m12:39:09.483019 [debug] [Thread-12 ]: On test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1: ROLLBACK
+[0m12:39:09.486065 [debug] [Thread-5 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a'
+[0m12:39:09.488049 [debug] [Thread-6 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: Close
+[0m12:39:09.490049 [debug] [Thread-2 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: Close
+[0m12:39:09.492585 [debug] [Thread-7 (]: Failed to rollback 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e'
+[0m12:39:09.495677 [debug] [Thread-9 (]: Failed to rollback 'test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d'
+[0m12:39:09.497676 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: Close
+[0m12:39:09.500673 [debug] [Thread-3 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3: Close
+[0m12:39:09.502212 [debug] [Thread-8 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: Close
+[0m12:39:09.504696 [debug] [Thread-10 ]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: Close
+[0m12:39:09.506709 [debug] [Thread-14 ]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: Close
+[0m12:39:09.510721 [debug] [Thread-21 ]: Failed to rollback 'test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2'
+[0m12:39:09.513260 [debug] [Thread-12 ]: Failed to rollback 'test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1'
+[0m12:39:09.515270 [debug] [Thread-5 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: Close
+[0m12:39:09.519264 [info ] [Thread-6 (]: 18 of 28 PASS not_null_orders_amount ........................................... [[32mPASS[0m in 0.90s]
+[0m12:39:09.523400 [info ] [Thread-2 (]: 19 of 28 PASS not_null_orders_bank_transfer_amount ............................. [[32mPASS[0m in 0.90s]
+[0m12:39:09.527421 [debug] [Thread-7 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: Close
+[0m12:39:09.528421 [debug] [Thread-9 (]: On test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d: Close
+[0m12:39:09.532444 [info ] [Thread-1 (]: 21 of 28 PASS not_null_orders_credit_card_amount ............................... [[32mPASS[0m in 0.89s]
+[0m12:39:09.536641 [info ] [Thread-3 (]: 17 of 28 PASS accepted_values_orders_status__placed__shipped__completed__return_pending__returned  [[32mPASS[0m in 0.92s]
+[0m12:39:09.541557 [info ] [Thread-8 (]: 20 of 28 PASS not_null_orders_coupon_amount .................................... [[32mPASS[0m in 0.91s]
+[0m12:39:09.547235 [info ] [Thread-10 ]: 22 of 28 PASS not_null_orders_customer_id ...................................... [[32mPASS[0m in 0.90s]
+[0m12:39:09.552275 [info ] [Thread-14 ]: 24 of 28 PASS not_null_orders_order_id ......................................... [[32mPASS[0m in 0.90s]
+[0m12:39:09.554294 [debug] [Thread-21 ]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: Close
+[0m12:39:09.557295 [debug] [Thread-12 ]: On test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1: Close
+[0m12:39:09.560308 [info ] [Thread-5 (]: 23 of 28 PASS not_null_orders_gift_card_amount ................................. [[32mPASS[0m in 0.91s]
+[0m12:39:09.564688 [debug] [Thread-6 (]: Finished running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:39:09.567405 [debug] [Thread-2 (]: Finished running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:39:09.571395 [info ] [Thread-7 (]: 25 of 28 PASS unique_orders_order_id ........................................... [[32mPASS[0m in 0.91s]
+[0m12:39:09.577494 [info ] [Thread-9 (]: 26 of 28 PASS not_null_customers_customer_id ................................... [[32mPASS[0m in 0.90s]
+[0m12:39:09.581495 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:39:09.584554 [debug] [Thread-3 (]: Finished running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:39:09.588348 [debug] [Thread-8 (]: Finished running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:39:09.591887 [debug] [Thread-10 ]: Finished running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:39:09.594460 [debug] [Thread-14 ]: Finished running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:39:09.598475 [info ] [Thread-21 ]: 27 of 28 PASS relationships_orders_customer_id__customer_id__ref_customers_ .... [[32mPASS[0m in 0.92s]
+[0m12:39:09.603532 [info ] [Thread-12 ]: 28 of 28 PASS unique_customers_customer_id ..................................... [[32mPASS[0m in 0.92s]
+[0m12:39:09.608586 [debug] [Thread-5 (]: Finished running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:39:09.613673 [debug] [Thread-7 (]: Finished running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:39:09.616660 [debug] [Thread-9 (]: Finished running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:39:09.624331 [debug] [Thread-21 ]: Finished running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:39:09.627349 [debug] [Thread-12 ]: Finished running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:39:09.640211 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:39:09.641723 [debug] [MainThread]: On master: BEGIN
+[0m12:39:09.643762 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:39:09.646269 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:39:09.648269 [debug] [MainThread]: On master: COMMIT
+[0m12:39:09.650265 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:39:09.652332 [debug] [MainThread]: On master: COMMIT
+[0m12:39:09.654348 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:39:09.656239 [debug] [MainThread]: On master: Close
+[0m12:39:09.658235 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:39:09.660250 [debug] [MainThread]: Connection 'list_jaffle_shop' was properly closed.
+[0m12:39:09.661870 [debug] [MainThread]: Connection 'list_jaffle_shop_main' was properly closed.
+[0m12:39:09.662381 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59' was properly closed.
+[0m12:39:09.664408 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49' was properly closed.
+[0m12:39:09.666410 [debug] [MainThread]: Connection 'test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3' was properly closed.
+[0m12:39:09.667396 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a' was properly closed.
+[0m12:39:09.669426 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e' was properly closed.
+[0m12:39:09.671397 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d' was properly closed.
+[0m12:39:09.673463 [debug] [MainThread]: Connection 'test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278' was properly closed.
+[0m12:39:09.675491 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m12:39:09.676765 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_stg_payments_payment_id.3744510712' was properly closed.
+[0m12:39:09.677779 [debug] [MainThread]: Connection 'test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad' was properly closed.
+[0m12:39:09.679783 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64' was properly closed.
+[0m12:39:09.680766 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a' was properly closed.
+[0m12:39:09.682293 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa' was properly closed.
+[0m12:39:09.684327 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_stg_customers_customer_id.c7614daada' was properly closed.
+[0m12:39:09.685319 [debug] [MainThread]: Connection 'model.jaffle_shop.orders' was properly closed.
+[0m12:39:09.687310 [debug] [MainThread]: Connection 'model.jaffle_shop.customers' was properly closed.
+[0m12:39:09.689306 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_amount.106140f9fd' was properly closed.
+[0m12:39:09.690305 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625' was properly closed.
+[0m12:39:09.691824 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_customer_id.c5f02694af' was properly closed.
+[0m12:39:09.693392 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_order_id.cf6c17daed' was properly closed.
+[0m12:39:09.694380 [debug] [MainThread]: Connection 'test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2' was properly closed.
+[0m12:39:09.695900 [info ] [MainThread]: 
+[0m12:39:09.698235 [info ] [MainThread]: Finished running 3 seeds, 3 view models, 20 tests, 2 table models in 0 hours 0 minutes and 4.29 seconds (4.29s).
+[0m12:39:09.726231 [debug] [MainThread]: Command end result
+[0m12:39:09.751747 [info ] [MainThread]: 
+[0m12:39:09.755308 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:39:09.758328 [info ] [MainThread]: 
+[0m12:39:09.760334 [info ] [MainThread]: Done. PASS=28 WARN=0 ERROR=0 SKIP=0 TOTAL=28
+[0m12:39:09.766026 [debug] [MainThread]: Command `dbt build` succeeded at 12:39:09.765450 after 6.19 seconds
+[0m12:39:09.767427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C60FAD4210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C60FAD6D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C60FAD4310>]}
+[0m12:39:09.769420 [debug] [MainThread]: Flushing usage events
+[0m12:40:50.532694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354A8C910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354A8C8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354A8CB90>]}
+
+
+============================== 12:40:50.538177 | dd16f7d6-b768-49d1-aaba-e3af375a4359 ==============================
+[0m12:40:50.538177 [info ] [MainThread]: Running with dbt=1.5.0
+[0m12:40:50.539235 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\dev\\jaffle_shop_duckdb', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\dev\\jaffle_shop_duckdb\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:40:50.721792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd16f7d6-b768-49d1-aaba-e3af375a4359', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354CB0C50>]}
+[0m12:40:50.744282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd16f7d6-b768-49d1-aaba-e3af375a4359', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354CCB650>]}
+[0m12:40:50.764368 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
+[0m12:40:50.943371 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:40:50.944618 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:40:50.956421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd16f7d6-b768-49d1-aaba-e3af375a4359', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E35432A590>]}
+[0m12:40:50.961437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd16f7d6-b768-49d1-aaba-e3af375a4359', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354DC57D0>]}
+[0m12:40:50.962698 [info ] [MainThread]: Found 5 models, 20 tests, 0 snapshots, 0 analyses, 313 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:40:50.963825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd16f7d6-b768-49d1-aaba-e3af375a4359', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354DFF390>]}
+[0m12:40:50.970108 [info ] [MainThread]: 
+[0m12:40:50.971800 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:40:50.974502 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_jaffle_shop_main'
+[0m12:40:50.988293 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m12:40:50.988293 [debug] [ThreadPool]: On list_jaffle_shop_main: BEGIN
+[0m12:40:50.989298 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:40:51.012729 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:40:51.013800 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m12:40:51.015681 [debug] [ThreadPool]: On list_jaffle_shop_main: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop_main"} */
+select
+      'jaffle_shop' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from information_schema.tables
+    where table_schema = 'main'
+  
+[0m12:40:51.091778 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:40:51.095495 [debug] [ThreadPool]: On list_jaffle_shop_main: ROLLBACK
+[0m12:40:51.098511 [debug] [ThreadPool]: Failed to rollback 'list_jaffle_shop_main'
+[0m12:40:51.099604 [debug] [ThreadPool]: On list_jaffle_shop_main: Close
+[0m12:40:51.104308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd16f7d6-b768-49d1-aaba-e3af375a4359', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E35432A590>]}
+[0m12:40:51.105341 [info ] [MainThread]: Concurrency: 24 threads (target='dev')
+[0m12:40:51.107327 [info ] [MainThread]: 
+[0m12:40:51.127419 [debug] [Thread-1 (]: Began running node seed.jaffle_shop.raw_customers
+[0m12:40:51.128399 [debug] [Thread-2 (]: Began running node seed.jaffle_shop.raw_orders
+[0m12:40:51.129413 [debug] [Thread-3 (]: Began running node seed.jaffle_shop.raw_payments
+[0m12:40:51.132732 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.jaffle_shop.raw_customers'
+[0m12:40:51.135973 [debug] [Thread-2 (]: Acquiring new duckdb connection 'seed.jaffle_shop.raw_orders'
+[0m12:40:51.138023 [debug] [Thread-3 (]: Acquiring new duckdb connection 'seed.jaffle_shop.raw_payments'
+[0m12:40:51.140016 [debug] [Thread-1 (]: Began compiling node seed.jaffle_shop.raw_customers
+[0m12:40:51.140016 [debug] [Thread-2 (]: Began compiling node seed.jaffle_shop.raw_orders
+[0m12:40:51.142433 [debug] [Thread-3 (]: Began compiling node seed.jaffle_shop.raw_payments
+[0m12:40:51.148487 [debug] [Thread-1 (]: Timing info for seed.jaffle_shop.raw_customers (compile): 12:40:51.143493 => 12:40:51.148487
+[0m12:40:51.152819 [debug] [Thread-2 (]: Timing info for seed.jaffle_shop.raw_orders (compile): 12:40:51.150488 => 12:40:51.152819
+[0m12:40:51.155859 [debug] [Thread-3 (]: Timing info for seed.jaffle_shop.raw_payments (compile): 12:40:51.153905 => 12:40:51.155859
+[0m12:40:51.156992 [debug] [Thread-1 (]: Began executing node seed.jaffle_shop.raw_customers
+[0m12:40:51.157943 [debug] [Thread-2 (]: Began executing node seed.jaffle_shop.raw_orders
+[0m12:40:51.159947 [debug] [Thread-3 (]: Began executing node seed.jaffle_shop.raw_payments
+[0m12:40:51.161644 [debug] [Thread-1 (]: Timing info for seed.jaffle_shop.raw_customers (execute): 12:40:51.159947 => 12:40:51.159947
+[0m12:40:51.162283 [debug] [Thread-2 (]: Timing info for seed.jaffle_shop.raw_orders (execute): 12:40:51.162283 => 12:40:51.162283
+[0m12:40:51.164317 [debug] [Thread-3 (]: Timing info for seed.jaffle_shop.raw_payments (execute): 12:40:51.163423 => 12:40:51.163423
+[0m12:40:51.166405 [debug] [Thread-1 (]: Finished running node seed.jaffle_shop.raw_customers
+[0m12:40:51.169433 [debug] [Thread-2 (]: Finished running node seed.jaffle_shop.raw_orders
+[0m12:40:51.170378 [debug] [Thread-3 (]: Finished running node seed.jaffle_shop.raw_payments
+[0m12:40:51.172825 [debug] [Thread-5 (]: Began running node model.jaffle_shop.stg_customers
+[0m12:40:51.173885 [debug] [Thread-7 (]: Began running node model.jaffle_shop.stg_orders
+[0m12:40:51.175922 [debug] [Thread-9 (]: Began running node model.jaffle_shop.stg_payments
+[0m12:40:51.176872 [debug] [Thread-5 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_customers'
+[0m12:40:51.178887 [debug] [Thread-7 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_orders'
+[0m12:40:51.179893 [debug] [Thread-9 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_payments'
+[0m12:40:51.180798 [debug] [Thread-5 (]: Began compiling node model.jaffle_shop.stg_customers
+[0m12:40:51.182575 [debug] [Thread-7 (]: Began compiling node model.jaffle_shop.stg_orders
+[0m12:40:51.183659 [debug] [Thread-9 (]: Began compiling node model.jaffle_shop.stg_payments
+[0m12:40:51.188375 [debug] [Thread-5 (]: Writing injected SQL for node "model.jaffle_shop.stg_customers"
+[0m12:40:51.195692 [debug] [Thread-7 (]: Writing injected SQL for node "model.jaffle_shop.stg_orders"
+[0m12:40:51.201700 [debug] [Thread-9 (]: Writing injected SQL for node "model.jaffle_shop.stg_payments"
+[0m12:40:51.205852 [debug] [Thread-7 (]: Timing info for model.jaffle_shop.stg_orders (compile): 12:40:51.189275 => 12:40:51.204361
+[0m12:40:51.206369 [debug] [Thread-5 (]: Timing info for model.jaffle_shop.stg_customers (compile): 12:40:51.184650 => 12:40:51.206369
+[0m12:40:51.208370 [debug] [Thread-7 (]: Began executing node model.jaffle_shop.stg_orders
+[0m12:40:51.210361 [debug] [Thread-9 (]: Timing info for model.jaffle_shop.stg_payments (compile): 12:40:51.197594 => 12:40:51.209363
+[0m12:40:51.212107 [debug] [Thread-5 (]: Began executing node model.jaffle_shop.stg_customers
+[0m12:40:51.214807 [debug] [Thread-7 (]: Timing info for model.jaffle_shop.stg_orders (execute): 12:40:51.213925 => 12:40:51.213925
+[0m12:40:51.215912 [debug] [Thread-9 (]: Began executing node model.jaffle_shop.stg_payments
+[0m12:40:51.217911 [debug] [Thread-5 (]: Timing info for model.jaffle_shop.stg_customers (execute): 12:40:51.216919 => 12:40:51.216919
+[0m12:40:51.219802 [debug] [Thread-7 (]: Finished running node model.jaffle_shop.stg_orders
+[0m12:40:51.220815 [debug] [Thread-9 (]: Timing info for model.jaffle_shop.stg_payments (execute): 12:40:51.219802 => 12:40:51.219802
+[0m12:40:51.222386 [debug] [Thread-5 (]: Finished running node model.jaffle_shop.stg_customers
+[0m12:40:51.224410 [debug] [Thread-11 ]: Began running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:40:51.226428 [debug] [Thread-12 ]: Began running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:40:51.227442 [debug] [Thread-9 (]: Finished running node model.jaffle_shop.stg_payments
+[0m12:40:51.229444 [debug] [Thread-13 ]: Began running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:40:51.232318 [debug] [Thread-11 ]: Acquiring new duckdb connection 'test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad'
+[0m12:40:51.233358 [debug] [Thread-15 ]: Began running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:40:51.234328 [debug] [Thread-16 ]: Began running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:40:51.236353 [debug] [Thread-12 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64'
+[0m12:40:51.238368 [debug] [Thread-18 ]: Began running node model.jaffle_shop.customers
+[0m12:40:51.239348 [debug] [Thread-19 ]: Began running node model.jaffle_shop.orders
+[0m12:40:51.240514 [debug] [Thread-20 ]: Began running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:40:51.241356 [debug] [Thread-21 ]: Began running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:40:51.242409 [debug] [Thread-13 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a'
+[0m12:40:51.243418 [debug] [Thread-22 ]: Began running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:40:51.245024 [debug] [Thread-11 ]: Began compiling node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:40:51.246433 [debug] [Thread-15 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa'
+[0m12:40:51.247436 [debug] [Thread-16 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_stg_customers_customer_id.c7614daada'
+[0m12:40:51.249418 [debug] [Thread-12 ]: Began compiling node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:40:51.250459 [debug] [Thread-18 ]: Acquiring new duckdb connection 'model.jaffle_shop.customers'
+[0m12:40:51.251431 [debug] [Thread-19 ]: Acquiring new duckdb connection 'model.jaffle_shop.orders'
+[0m12:40:51.253586 [debug] [Thread-20 ]: Acquiring new duckdb connection 'test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278'
+[0m12:40:51.254614 [debug] [Thread-21 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075'
+[0m12:40:51.255673 [debug] [Thread-13 ]: Began compiling node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:40:51.257586 [debug] [Thread-22 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_stg_payments_payment_id.3744510712'
+[0m12:40:51.283371 [debug] [Thread-11 ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m12:40:51.284425 [debug] [Thread-15 ]: Began compiling node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:40:51.285374 [debug] [Thread-16 ]: Began compiling node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:40:51.302347 [debug] [Thread-12 ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m12:40:51.303357 [debug] [Thread-18 ]: Began compiling node model.jaffle_shop.customers
+[0m12:40:51.305449 [debug] [Thread-19 ]: Began compiling node model.jaffle_shop.orders
+[0m12:40:51.306412 [debug] [Thread-20 ]: Began compiling node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:40:51.307411 [debug] [Thread-21 ]: Began compiling node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:40:51.317307 [debug] [Thread-13 ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m12:40:51.318305 [debug] [Thread-22 ]: Began compiling node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:40:51.324791 [debug] [Thread-15 ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m12:40:51.325806 [debug] [Thread-11 ]: Timing info for test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad (compile): 12:40:51.258584 => 12:40:51.325806
+[0m12:40:51.334625 [debug] [Thread-16 ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m12:40:51.340638 [debug] [Thread-18 ]: Writing injected SQL for node "model.jaffle_shop.customers"
+[0m12:40:51.341669 [debug] [Thread-12 ]: Timing info for test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64 (compile): 12:40:51.286905 => 12:40:51.340638
+[0m12:40:51.349011 [debug] [Thread-19 ]: Writing injected SQL for node "model.jaffle_shop.orders"
+[0m12:40:51.357468 [debug] [Thread-20 ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m12:40:51.364813 [debug] [Thread-21 ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m12:40:51.371826 [debug] [Thread-22 ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m12:40:51.372440 [debug] [Thread-13 ]: Timing info for test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a (compile): 12:40:51.307411 => 12:40:51.371826
+[0m12:40:51.373560 [debug] [Thread-11 ]: Began executing node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:40:51.375602 [debug] [Thread-15 ]: Timing info for test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa (compile): 12:40:51.319318 => 12:40:51.375602
+[0m12:40:51.377731 [debug] [Thread-16 ]: Timing info for test.jaffle_shop.unique_stg_customers_customer_id.c7614daada (compile): 12:40:51.326902 => 12:40:51.377731
+[0m12:40:51.379694 [debug] [Thread-12 ]: Began executing node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:40:51.381718 [debug] [Thread-18 ]: Timing info for model.jaffle_shop.customers (compile): 12:40:51.335625 => 12:40:51.380600
+[0m12:40:51.384271 [debug] [Thread-19 ]: Timing info for model.jaffle_shop.orders (compile): 12:40:51.342395 => 12:40:51.384271
+[0m12:40:51.387062 [debug] [Thread-20 ]: Timing info for test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278 (compile): 12:40:51.349011 => 12:40:51.385420
+[0m12:40:51.388197 [debug] [Thread-21 ]: Timing info for test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075 (compile): 12:40:51.358455 => 12:40:51.387163
+[0m12:40:51.389196 [debug] [Thread-13 ]: Began executing node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:40:51.390192 [debug] [Thread-22 ]: Timing info for test.jaffle_shop.unique_stg_payments_payment_id.3744510712 (compile): 12:40:51.365844 => 12:40:51.390192
+[0m12:40:51.390192 [debug] [Thread-11 ]: Timing info for test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad (execute): 12:40:51.390192 => 12:40:51.390192
+[0m12:40:51.391892 [debug] [Thread-15 ]: Began executing node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:40:51.392506 [debug] [Thread-16 ]: Began executing node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:40:51.394630 [debug] [Thread-12 ]: Timing info for test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64 (execute): 12:40:51.393628 => 12:40:51.393628
+[0m12:40:51.396115 [debug] [Thread-18 ]: Began executing node model.jaffle_shop.customers
+[0m12:40:51.398184 [debug] [Thread-19 ]: Began executing node model.jaffle_shop.orders
+[0m12:40:51.400136 [debug] [Thread-20 ]: Began executing node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:40:51.401725 [debug] [Thread-21 ]: Began executing node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:40:51.403274 [debug] [Thread-13 ]: Timing info for test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a (execute): 12:40:51.403274 => 12:40:51.403274
+[0m12:40:51.405272 [debug] [Thread-22 ]: Began executing node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:40:51.408278 [debug] [Thread-11 ]: Finished running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m12:40:51.409269 [debug] [Thread-15 ]: Timing info for test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa (execute): 12:40:51.409269 => 12:40:51.409269
+[0m12:40:51.410287 [debug] [Thread-16 ]: Timing info for test.jaffle_shop.unique_stg_customers_customer_id.c7614daada (execute): 12:40:51.410287 => 12:40:51.410287
+[0m12:40:51.413389 [debug] [Thread-12 ]: Finished running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m12:40:51.415442 [debug] [Thread-18 ]: Timing info for model.jaffle_shop.customers (execute): 12:40:51.414404 => 12:40:51.414404
+[0m12:40:51.416426 [debug] [Thread-19 ]: Timing info for model.jaffle_shop.orders (execute): 12:40:51.416426 => 12:40:51.416426
+[0m12:40:51.418431 [debug] [Thread-20 ]: Timing info for test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278 (execute): 12:40:51.417429 => 12:40:51.417429
+[0m12:40:51.419430 [debug] [Thread-21 ]: Timing info for test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075 (execute): 12:40:51.418431 => 12:40:51.418431
+[0m12:40:51.421945 [debug] [Thread-13 ]: Finished running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m12:40:51.424475 [debug] [Thread-22 ]: Timing info for test.jaffle_shop.unique_stg_payments_payment_id.3744510712 (execute): 12:40:51.423466 => 12:40:51.423466
+[0m12:40:51.427796 [debug] [Thread-15 ]: Finished running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m12:40:51.431798 [debug] [Thread-16 ]: Finished running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m12:40:51.434415 [debug] [Thread-18 ]: Finished running node model.jaffle_shop.customers
+[0m12:40:51.436342 [debug] [Thread-19 ]: Finished running node model.jaffle_shop.orders
+[0m12:40:51.440345 [debug] [Thread-20 ]: Finished running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m12:40:51.442628 [debug] [Thread-21 ]: Finished running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m12:40:51.446298 [debug] [Thread-22 ]: Finished running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m12:40:51.449332 [debug] [Thread-24 ]: Began running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:40:51.450316 [debug] [Thread-4 (]: Began running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:40:51.452380 [debug] [Thread-2 (]: Began running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:40:51.453393 [debug] [Thread-6 (]: Began running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:40:51.454397 [debug] [Thread-8 (]: Began running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:40:51.455218 [debug] [Thread-3 (]: Began running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:40:51.455218 [debug] [Thread-10 ]: Began running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:40:51.456341 [debug] [Thread-20 ]: Began running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:40:51.457303 [debug] [Thread-7 (]: Began running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:40:51.458294 [debug] [Thread-14 ]: Began running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:40:51.459293 [debug] [Thread-5 (]: Began running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:40:51.460325 [debug] [Thread-17 ]: Began running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:40:51.462368 [debug] [Thread-24 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d'
+[0m12:40:51.464386 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1'
+[0m12:40:51.465401 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.jaffle_shop.raw_orders, now test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3)
+[0m12:40:51.467409 [debug] [Thread-6 (]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_amount.106140f9fd'
+[0m12:40:51.468404 [debug] [Thread-8 (]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49'
+[0m12:40:51.470399 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly seed.jaffle_shop.raw_payments, now test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625)
+[0m12:40:51.471974 [debug] [Thread-10 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59'
+[0m12:40:51.475123 [debug] [Thread-20 ]: Re-using an available connection from the pool (formerly test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278, now test.jaffle_shop.not_null_orders_customer_id.c5f02694af)
+[0m12:40:51.476529 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.stg_orders, now test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a)
+[0m12:40:51.477533 [debug] [Thread-14 ]: Acquiring new duckdb connection 'test.jaffle_shop.not_null_orders_order_id.cf6c17daed'
+[0m12:40:51.479530 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.stg_customers, now test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2)
+[0m12:40:51.482032 [debug] [Thread-17 ]: Acquiring new duckdb connection 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e'
+[0m12:40:51.482538 [debug] [Thread-24 ]: Began compiling node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:40:51.484547 [debug] [Thread-4 (]: Began compiling node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:40:51.485553 [debug] [Thread-2 (]: Began compiling node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:40:51.485553 [debug] [Thread-6 (]: Began compiling node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:40:51.489079 [debug] [Thread-8 (]: Began compiling node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:40:51.490097 [debug] [Thread-3 (]: Began compiling node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:40:51.490097 [debug] [Thread-10 ]: Began compiling node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:40:51.491614 [debug] [Thread-20 ]: Began compiling node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:40:51.493749 [debug] [Thread-7 (]: Began compiling node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:40:51.494746 [debug] [Thread-14 ]: Began compiling node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:40:51.495736 [debug] [Thread-5 (]: Began compiling node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:40:51.497747 [debug] [Thread-17 ]: Began compiling node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:40:51.507268 [debug] [Thread-24 ]: Writing injected SQL for node "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m12:40:51.515309 [debug] [Thread-4 (]: Writing injected SQL for node "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m12:40:51.524976 [debug] [Thread-2 (]: Writing injected SQL for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m12:40:51.532256 [debug] [Thread-6 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m12:40:51.539275 [debug] [Thread-8 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m12:40:51.545435 [debug] [Thread-3 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m12:40:51.554522 [debug] [Thread-10 ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m12:40:51.560525 [debug] [Thread-20 ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m12:40:51.569437 [debug] [Thread-7 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m12:40:51.575477 [debug] [Thread-14 ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m12:40:51.588159 [debug] [Thread-5 (]: Writing injected SQL for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m12:40:51.597258 [debug] [Thread-17 ]: Writing injected SQL for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m12:40:51.601895 [debug] [Thread-24 ]: Timing info for test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d (compile): 12:40:51.498750 => 12:40:51.599630
+[0m12:40:51.604452 [debug] [Thread-4 (]: Timing info for test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1 (compile): 12:40:51.508279 => 12:40:51.603454
+[0m12:40:51.606456 [debug] [Thread-2 (]: Timing info for test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3 (compile): 12:40:51.516307 => 12:40:51.606456
+[0m12:40:51.608462 [debug] [Thread-6 (]: Timing info for test.jaffle_shop.not_null_orders_amount.106140f9fd (compile): 12:40:51.526212 => 12:40:51.607461
+[0m12:40:51.610455 [debug] [Thread-8 (]: Timing info for test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49 (compile): 12:40:51.533269 => 12:40:51.609475
+[0m12:40:51.612506 [debug] [Thread-3 (]: Timing info for test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625 (compile): 12:40:51.540277 => 12:40:51.612506
+[0m12:40:51.614520 [debug] [Thread-10 ]: Timing info for test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59 (compile): 12:40:51.546440 => 12:40:51.613517
+[0m12:40:51.615542 [debug] [Thread-20 ]: Timing info for test.jaffle_shop.not_null_orders_customer_id.c5f02694af (compile): 12:40:51.555540 => 12:40:51.615542
+[0m12:40:51.617519 [debug] [Thread-7 (]: Timing info for test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a (compile): 12:40:51.561524 => 12:40:51.617519
+[0m12:40:51.619523 [debug] [Thread-14 ]: Timing info for test.jaffle_shop.not_null_orders_order_id.cf6c17daed (compile): 12:40:51.570437 => 12:40:51.618540
+[0m12:40:51.622250 [debug] [Thread-24 ]: Began executing node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:40:51.624280 [debug] [Thread-5 (]: Timing info for test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2 (compile): 12:40:51.576477 => 12:40:51.623294
+[0m12:40:51.625759 [debug] [Thread-17 ]: Timing info for test.jaffle_shop.unique_orders_order_id.fed79b3a6e (compile): 12:40:51.589158 => 12:40:51.624731
+[0m12:40:51.626750 [debug] [Thread-4 (]: Began executing node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:40:51.627745 [debug] [Thread-2 (]: Began executing node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:40:51.628746 [debug] [Thread-6 (]: Began executing node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:40:51.629759 [debug] [Thread-8 (]: Began executing node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:40:51.630748 [debug] [Thread-3 (]: Began executing node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:40:51.631751 [debug] [Thread-10 ]: Began executing node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:40:51.632265 [debug] [Thread-20 ]: Began executing node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:40:51.634281 [debug] [Thread-7 (]: Began executing node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:40:51.635283 [debug] [Thread-14 ]: Began executing node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:40:51.636282 [debug] [Thread-24 ]: Timing info for test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d (execute): 12:40:51.636282 => 12:40:51.636282
+[0m12:40:51.637279 [debug] [Thread-5 (]: Began executing node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:40:51.638301 [debug] [Thread-17 ]: Began executing node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:40:51.639287 [debug] [Thread-4 (]: Timing info for test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1 (execute): 12:40:51.639287 => 12:40:51.639287
+[0m12:40:51.640279 [debug] [Thread-2 (]: Timing info for test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3 (execute): 12:40:51.640279 => 12:40:51.640279
+[0m12:40:51.642317 [debug] [Thread-6 (]: Timing info for test.jaffle_shop.not_null_orders_amount.106140f9fd (execute): 12:40:51.641784 => 12:40:51.641784
+[0m12:40:51.644343 [debug] [Thread-8 (]: Timing info for test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49 (execute): 12:40:51.643343 => 12:40:51.643343
+[0m12:40:51.647291 [debug] [Thread-3 (]: Timing info for test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625 (execute): 12:40:51.645918 => 12:40:51.645918
+[0m12:40:51.648294 [debug] [Thread-10 ]: Timing info for test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59 (execute): 12:40:51.647291 => 12:40:51.647291
+[0m12:40:51.650307 [debug] [Thread-20 ]: Timing info for test.jaffle_shop.not_null_orders_customer_id.c5f02694af (execute): 12:40:51.649298 => 12:40:51.649298
+[0m12:40:51.653420 [debug] [Thread-7 (]: Timing info for test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a (execute): 12:40:51.652407 => 12:40:51.652407
+[0m12:40:51.655425 [debug] [Thread-14 ]: Timing info for test.jaffle_shop.not_null_orders_order_id.cf6c17daed (execute): 12:40:51.654419 => 12:40:51.655425
+[0m12:40:51.657445 [debug] [Thread-24 ]: Finished running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m12:40:51.659877 [debug] [Thread-5 (]: Timing info for test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2 (execute): 12:40:51.659877 => 12:40:51.659877
+[0m12:40:51.662387 [debug] [Thread-17 ]: Timing info for test.jaffle_shop.unique_orders_order_id.fed79b3a6e (execute): 12:40:51.661878 => 12:40:51.661878
+[0m12:40:51.664402 [debug] [Thread-4 (]: Finished running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m12:40:51.666397 [debug] [Thread-2 (]: Finished running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m12:40:51.668405 [debug] [Thread-6 (]: Finished running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m12:40:51.669396 [debug] [Thread-8 (]: Finished running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m12:40:51.670397 [debug] [Thread-3 (]: Finished running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m12:40:51.672446 [debug] [Thread-10 ]: Finished running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m12:40:51.675458 [debug] [Thread-20 ]: Finished running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m12:40:51.677474 [debug] [Thread-7 (]: Finished running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m12:40:51.678465 [debug] [Thread-14 ]: Finished running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m12:40:51.684451 [debug] [Thread-5 (]: Finished running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m12:40:51.686967 [debug] [Thread-17 ]: Finished running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m12:40:51.702334 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:40:51.704695 [debug] [MainThread]: Connection 'list_jaffle_shop_main' was properly closed.
+[0m12:40:51.706840 [debug] [MainThread]: Connection 'seed.jaffle_shop.raw_customers' was properly closed.
+[0m12:40:51.708038 [debug] [MainThread]: Connection 'test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3' was properly closed.
+[0m12:40:51.709051 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625' was properly closed.
+[0m12:40:51.710085 [debug] [MainThread]: Connection 'test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2' was properly closed.
+[0m12:40:51.710085 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a' was properly closed.
+[0m12:40:51.711605 [debug] [MainThread]: Connection 'model.jaffle_shop.stg_payments' was properly closed.
+[0m12:40:51.712618 [debug] [MainThread]: Connection 'test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad' was properly closed.
+[0m12:40:51.713832 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64' was properly closed.
+[0m12:40:51.715818 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a' was properly closed.
+[0m12:40:51.717841 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa' was properly closed.
+[0m12:40:51.718836 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_stg_customers_customer_id.c7614daada' was properly closed.
+[0m12:40:51.718836 [debug] [MainThread]: Connection 'model.jaffle_shop.customers' was properly closed.
+[0m12:40:51.719837 [debug] [MainThread]: Connection 'model.jaffle_shop.orders' was properly closed.
+[0m12:40:51.720829 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_customer_id.c5f02694af' was properly closed.
+[0m12:40:51.722433 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075' was properly closed.
+[0m12:40:51.723476 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_stg_payments_payment_id.3744510712' was properly closed.
+[0m12:40:51.724492 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d' was properly closed.
+[0m12:40:51.725520 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m12:40:51.727528 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_amount.106140f9fd' was properly closed.
+[0m12:40:51.728522 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49' was properly closed.
+[0m12:40:51.730511 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59' was properly closed.
+[0m12:40:51.732533 [debug] [MainThread]: Connection 'test.jaffle_shop.not_null_orders_order_id.cf6c17daed' was properly closed.
+[0m12:40:51.733545 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e' was properly closed.
+[0m12:40:51.744635 [debug] [MainThread]: Command end result
+[0m12:40:51.775620 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m12:40:51.776576 [info ] [MainThread]: Building catalog
+[0m12:40:51.783243 [debug] [ThreadPool]: Acquiring new duckdb connection 'jaffle_shop.information_schema'
+[0m12:40:51.792344 [debug] [ThreadPool]: Using duckdb connection "jaffle_shop.information_schema"
+[0m12:40:51.793351 [debug] [ThreadPool]: On jaffle_shop.information_schema: BEGIN
+[0m12:40:51.794713 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:40:51.795381 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:40:51.797397 [debug] [ThreadPool]: Using duckdb connection "jaffle_shop.information_schema"
+[0m12:40:51.799391 [debug] [ThreadPool]: On jaffle_shop.information_schema: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "jaffle_shop.information_schema"} */
+select
+        'jaffle_shop' as table_database,
+        t.table_schema,
+        t.table_name,
+        t.table_type,
+        '' as table_comment,
+        c.column_name,
+        c.ordinal_position as column_index,
+        c.data_type column_type,
+        '' as column_comment,
+        '' as table_owner
+    FROM information_schema.tables t JOIN information_schema.columns c ON t.table_schema = c.table_schema AND t.table_name = c.table_name
+    WHERE (upper(t.table_schema) = upper('main'))
+    AND t.table_type IN ('BASE TABLE', 'VIEW')
+    ORDER BY
+        t.table_schema,
+        t.table_name,
+        c.ordinal_position
+[0m12:40:51.841463 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:40:51.848834 [debug] [ThreadPool]: On jaffle_shop.information_schema: ROLLBACK
+[0m12:40:51.850885 [debug] [ThreadPool]: Failed to rollback 'jaffle_shop.information_schema'
+[0m12:40:51.850885 [debug] [ThreadPool]: On jaffle_shop.information_schema: Close
+[0m12:40:51.880426 [info ] [MainThread]: Catalog written to D:\dev\jaffle_shop_duckdb\target\catalog.json
+[0m12:40:51.882595 [debug] [MainThread]: Command `dbt docs generate` succeeded at 12:40:51.882595 after 1.40 seconds
+[0m12:40:51.882595 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m12:40:51.884751 [debug] [MainThread]: Connection 'jaffle_shop.information_schema' was properly closed.
+[0m12:40:51.885197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E352794750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E34E46E1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E354D0EB10>]}
+[0m12:40:51.886312 [debug] [MainThread]: Flushing usage events
+[0m15:25:09.685599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDB584D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDCA995D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDB2A290>]}
+
+
+============================== 15:25:09.752439 | ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6 ==============================
+[0m15:25:09.752439 [info ] [MainThread]: Running with dbt=1.5.0
+[0m15:25:09.756821 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\dev\\jaffle_shop_duckdb\\logs', 'version_check': 'True', 'profiles_dir': 'D:\\dev\\jaffle_shop_duckdb', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m15:25:10.894794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDB583D0>]}
+[0m15:25:10.946664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDD78910>]}
+[0m15:25:10.994650 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
+[0m15:25:11.284612 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:25:11.286660 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:25:11.335738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDB4E650>]}
+[0m15:25:11.366369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDE06190>]}
+[0m15:25:11.368445 [info ] [MainThread]: Found 5 models, 20 tests, 0 snapshots, 0 analyses, 313 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m15:25:11.372364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDF47FD0>]}
+[0m15:25:11.379369 [info ] [MainThread]: 
+[0m15:25:11.383367 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:25:11.388362 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_jaffle_shop'
+[0m15:25:11.434448 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop"
+[0m15:25:11.435456 [debug] [ThreadPool]: On list_jaffle_shop: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop"} */
+
+    
+    select schema_name
+    from information_schema.schemata
+  
+  
+[0m15:25:11.438003 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:25:11.510605 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m15:25:11.517611 [debug] [ThreadPool]: On list_jaffle_shop: Close
+[0m15:25:11.523622 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_jaffle_shop_main'
+[0m15:25:11.541375 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m15:25:11.542382 [debug] [ThreadPool]: On list_jaffle_shop_main: BEGIN
+[0m15:25:11.544319 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:25:11.546347 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m15:25:11.547345 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m15:25:11.549416 [debug] [ThreadPool]: On list_jaffle_shop_main: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop_main"} */
+select
+      'jaffle_shop' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from information_schema.tables
+    where table_schema = 'main'
+  
+[0m15:25:11.784490 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m15:25:11.819572 [debug] [ThreadPool]: On list_jaffle_shop_main: ROLLBACK
+[0m15:25:11.844406 [debug] [ThreadPool]: Failed to rollback 'list_jaffle_shop_main'
+[0m15:25:11.845412 [debug] [ThreadPool]: On list_jaffle_shop_main: Close
+[0m15:25:11.855402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDEC6F90>]}
+[0m15:25:11.857405 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:25:11.860317 [debug] [MainThread]: On master: BEGIN
+[0m15:25:11.861311 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:25:11.864452 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m15:25:11.866411 [debug] [MainThread]: On master: COMMIT
+[0m15:25:11.868418 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:25:11.870410 [debug] [MainThread]: On master: COMMIT
+[0m15:25:11.872401 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m15:25:11.873416 [debug] [MainThread]: On master: Close
+[0m15:25:11.877430 [info ] [MainThread]: Concurrency: 24 threads (target='dev')
+[0m15:25:11.879431 [info ] [MainThread]: 
+[0m15:25:11.965046 [debug] [Thread-1 (]: Began running node model.jaffle_shop.stg_customers
+[0m15:25:11.967101 [debug] [Thread-2 (]: Began running node model.jaffle_shop.stg_orders
+[0m15:25:11.968101 [debug] [Thread-3 (]: Began running node model.jaffle_shop.stg_payments
+[0m15:25:11.971182 [info ] [Thread-1 (]: 1 of 5 START sql view model main.stg_customers ................................. [RUN]
+[0m15:25:11.974099 [info ] [Thread-2 (]: 2 of 5 START sql view model main.stg_orders .................................... [RUN]
+[0m15:25:11.975109 [info ] [Thread-3 (]: 3 of 5 START sql view model main.stg_payments .................................. [RUN]
+[0m15:25:11.980558 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_customers'
+[0m15:25:11.983999 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_orders'
+[0m15:25:11.987023 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.jaffle_shop.stg_payments'
+[0m15:25:11.989018 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.stg_customers
+[0m15:25:11.991017 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.stg_orders
+[0m15:25:11.994023 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.stg_payments
+[0m15:25:12.003088 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.stg_customers"
+[0m15:25:12.009495 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.stg_orders"
+[0m15:25:12.022008 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.stg_payments"
+[0m15:25:12.027054 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.stg_customers (compile): 15:25:11.995022 => 15:25:12.026036
+[0m15:25:12.031067 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.stg_customers
+[0m15:25:12.033071 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.stg_orders (compile): 15:25:12.004093 => 15:25:12.031067
+[0m15:25:12.104607 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.stg_payments (compile): 15:25:12.011519 => 15:25:12.103702
+[0m15:25:12.119692 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.stg_orders
+[0m15:25:12.161419 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.stg_customers"
+[0m15:25:12.163408 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.stg_payments
+[0m15:25:12.180837 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.stg_orders"
+[0m15:25:12.198514 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m15:25:12.204505 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.stg_payments"
+[0m15:25:12.208511 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: BEGIN
+[0m15:25:12.211866 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m15:25:12.215881 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:25:12.217883 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m15:25:12.220899 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: BEGIN
+[0m15:25:12.227386 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.228467 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: BEGIN
+[0m15:25:12.231101 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:25:12.233084 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m15:25:12.235483 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:25:12.237900 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.240784 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+
+  
+  create view "jaffle_shop"."main"."stg_customers__dbt_tmp" as (
+    with source as (
+    select * from "jaffle_shop"."main"."raw_customers"
+
+),
+
+renamed as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from source
+
+)
+
+select * from renamed
+  );
+
+[0m15:25:12.244019 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.246012 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m15:25:12.248004 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m15:25:12.251017 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+
+  
+  create view "jaffle_shop"."main"."stg_orders__dbt_tmp" as (
+    with source as (
+    select * from "jaffle_shop"."main"."raw_orders"
+
+),
+
+renamed as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+
+    from source
+
+)
+
+select * from renamed
+  );
+
+[0m15:25:12.253021 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.256005 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+
+  
+  create view "jaffle_shop"."main"."stg_payments__dbt_tmp" as (
+    with source as (
+    select * from "jaffle_shop"."main"."raw_payments"
+
+),
+
+renamed as (
+
+    select
+        id as payment_id,
+        order_id,
+        payment_method,
+
+        -- `amount` is currently stored in cents, so we convert it to dollars
+        amount / 100 as amount
+
+    from source
+
+)
+
+select * from renamed
+  );
+
+[0m15:25:12.286024 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m15:25:12.288007 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.291023 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+alter view "jaffle_shop"."main"."stg_customers" rename to "stg_customers__dbt_backup"
+[0m15:25:12.293007 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.308015 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m15:25:12.310011 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.323019 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m15:25:12.326040 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+alter view "jaffle_shop"."main"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m15:25:12.338053 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m15:25:12.340579 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+alter view "jaffle_shop"."main"."stg_payments" rename to "stg_payments__dbt_backup"
+[0m15:25:12.343582 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+alter view "jaffle_shop"."main"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m15:25:12.345595 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.349582 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.361593 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m15:25:12.363580 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.377590 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m15:25:12.379584 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+alter view "jaffle_shop"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m15:25:12.458843 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: COMMIT
+[0m15:25:12.459842 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+alter view "jaffle_shop"."main"."stg_payments__dbt_tmp" rename to "stg_payments"
+[0m15:25:12.463850 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m15:25:12.465843 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.467841 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: COMMIT
+[0m15:25:12.469842 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.478843 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: COMMIT
+[0m15:25:12.487844 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: COMMIT
+[0m15:25:12.489839 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m15:25:12.491845 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m15:25:12.493845 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: COMMIT
+[0m15:25:12.496843 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: COMMIT
+[0m15:25:12.538855 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.564984 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.stg_customers"
+[0m15:25:12.566998 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.568999 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_customers"} */
+drop view if exists "jaffle_shop"."main"."stg_customers__dbt_backup" cascade
+[0m15:25:12.578987 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.stg_orders"
+[0m15:25:12.581983 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+drop view if exists "jaffle_shop"."main"."stg_orders__dbt_backup" cascade
+[0m15:25:12.587990 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.599982 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.stg_payments"
+[0m15:25:12.602789 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_payments"} */
+drop view if exists "jaffle_shop"."main"."stg_payments__dbt_backup" cascade
+[0m15:25:12.624248 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.631266 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.stg_customers (execute): 15:25:12.035068 => 15:25:12.631266
+[0m15:25:12.634264 [debug] [Thread-1 (]: On model.jaffle_shop.stg_customers: Close
+[0m15:25:12.636262 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDFBBAD0>]}
+[0m15:25:12.639778 [info ] [Thread-1 (]: 1 of 5 OK created sql view model main.stg_customers ............................ [[32mOK[0m in 0.66s]
+[0m15:25:12.644793 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.stg_customers
+[0m15:25:12.648789 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.659807 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.stg_orders (execute): 15:25:12.165409 => 15:25:12.658798
+[0m15:25:12.662793 [debug] [Thread-2 (]: On model.jaffle_shop.stg_orders: Close
+[0m15:25:12.668795 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDFDCB10>]}
+[0m15:25:12.671815 [info ] [Thread-2 (]: 2 of 5 OK created sql view model main.stg_orders ............................... [[32mOK[0m in 0.69s]
+[0m15:25:12.678814 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.stg_orders
+[0m15:25:12.683832 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.691359 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.stg_payments (execute): 15:25:12.183752 => 15:25:12.690360
+[0m15:25:12.694352 [debug] [Thread-3 (]: On model.jaffle_shop.stg_payments: Close
+[0m15:25:12.698373 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDDFB8CD0>]}
+[0m15:25:12.701366 [info ] [Thread-3 (]: 3 of 5 OK created sql view model main.stg_payments ............................. [[32mOK[0m in 0.71s]
+[0m15:25:12.704369 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.stg_payments
+[0m15:25:12.708345 [debug] [Thread-5 (]: Began running node model.jaffle_shop.customers
+[0m15:25:12.711351 [debug] [Thread-6 (]: Began running node model.jaffle_shop.orders
+[0m15:25:12.715351 [info ] [Thread-5 (]: 4 of 5 START sql table model main.customers .................................... [RUN]
+[0m15:25:12.719350 [info ] [Thread-6 (]: 5 of 5 START sql table model main.orders ....................................... [RUN]
+[0m15:25:12.723363 [debug] [Thread-5 (]: Acquiring new duckdb connection 'model.jaffle_shop.customers'
+[0m15:25:12.727707 [debug] [Thread-6 (]: Acquiring new duckdb connection 'model.jaffle_shop.orders'
+[0m15:25:12.729698 [debug] [Thread-5 (]: Began compiling node model.jaffle_shop.customers
+[0m15:25:12.730700 [debug] [Thread-6 (]: Began compiling node model.jaffle_shop.orders
+[0m15:25:12.744877 [debug] [Thread-5 (]: Writing injected SQL for node "model.jaffle_shop.customers"
+[0m15:25:12.757877 [debug] [Thread-6 (]: Writing injected SQL for node "model.jaffle_shop.orders"
+[0m15:25:12.762973 [debug] [Thread-5 (]: Timing info for model.jaffle_shop.customers (compile): 15:25:12.733198 => 15:25:12.761946
+[0m15:25:12.764979 [debug] [Thread-6 (]: Timing info for model.jaffle_shop.orders (compile): 15:25:12.746894 => 15:25:12.764979
+[0m15:25:12.766989 [debug] [Thread-5 (]: Began executing node model.jaffle_shop.customers
+[0m15:25:12.768971 [debug] [Thread-6 (]: Began executing node model.jaffle_shop.orders
+[0m15:25:12.869162 [debug] [Thread-5 (]: Writing runtime sql for node "model.jaffle_shop.customers"
+[0m15:25:12.885238 [debug] [Thread-6 (]: Writing runtime sql for node "model.jaffle_shop.orders"
+[0m15:25:12.889150 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.customers"
+[0m15:25:12.891152 [debug] [Thread-5 (]: On model.jaffle_shop.customers: BEGIN
+[0m15:25:12.894160 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m15:25:12.896207 [debug] [Thread-6 (]: Using duckdb connection "model.jaffle_shop.orders"
+[0m15:25:12.900252 [debug] [Thread-6 (]: On model.jaffle_shop.orders: BEGIN
+[0m15:25:12.902171 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.903170 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m15:25:12.905223 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.customers"
+[0m15:25:12.909150 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m15:25:12.911238 [debug] [Thread-5 (]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+
+  
+    
+    
+
+    create  table
+      "jaffle_shop"."main"."customers__dbt_tmp"
+  
+    as (
+      with customers as (
+
+    select * from "jaffle_shop"."main"."stg_customers"
+
+),
+
+orders as (
+
+    select * from "jaffle_shop"."main"."stg_orders"
+
+),
+
+payments as (
+
+    select * from "jaffle_shop"."main"."stg_payments"
+
+),
+
+customer_orders as (
+
+        select
+        customer_id,
+
+        min(order_date) as first_order,
+        max(order_date) as most_recent_order,
+        count(order_id) as number_of_orders
+    from orders
+
+    group by customer_id
+
+),
+
+customer_payments as (
+
+    select
+        orders.customer_id,
+        sum(amount) as total_amount
+
+    from payments
+
+    left join orders on
+         payments.order_id = orders.order_id
+
+    group by orders.customer_id
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order,
+        customer_orders.most_recent_order,
+        customer_orders.number_of_orders,
+        customer_payments.total_amount as customer_lifetime_value
+
+    from customers
+
+    left join customer_orders
+        on customers.customer_id = customer_orders.customer_id
+
+    left join customer_payments
+        on  customers.customer_id = customer_payments.customer_id
+
+)
+
+select * from final
+    );
+  
+  
+[0m15:25:12.913176 [debug] [Thread-6 (]: Using duckdb connection "model.jaffle_shop.orders"
+[0m15:25:12.917152 [debug] [Thread-6 (]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+
+  
+    
+    
+
+    create  table
+      "jaffle_shop"."main"."orders__dbt_tmp"
+  
+    as (
+      
+
+with orders as (
+
+    select * from "jaffle_shop"."main"."stg_orders"
+
+),
+
+payments as (
+
+    select * from "jaffle_shop"."main"."stg_payments"
+
+),
+
+order_payments as (
+
+    select
+        order_id,
+
+        sum(case when payment_method = 'credit_card' then amount else 0 end) as credit_card_amount,
+        sum(case when payment_method = 'coupon' then amount else 0 end) as coupon_amount,
+        sum(case when payment_method = 'bank_transfer' then amount else 0 end) as bank_transfer_amount,
+        sum(case when payment_method = 'gift_card' then amount else 0 end) as gift_card_amount,
+        sum(amount) as total_amount
+
+    from payments
+
+    group by order_id
+
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        orders.status,
+
+        order_payments.credit_card_amount,
+
+        order_payments.coupon_amount,
+
+        order_payments.bank_transfer_amount,
+
+        order_payments.gift_card_amount,
+
+        order_payments.total_amount as amount
+
+    from orders
+
+
+    left join order_payments
+        on orders.order_id = order_payments.order_id
+
+)
+
+select * from final
+    );
+  
+  
+[0m15:25:13.002108 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.004108 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.016521 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.customers"
+[0m15:25:13.026542 [debug] [Thread-6 (]: Using duckdb connection "model.jaffle_shop.orders"
+[0m15:25:13.028535 [debug] [Thread-5 (]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+alter table "jaffle_shop"."main"."customers" rename to "customers__dbt_backup"
+[0m15:25:13.030616 [debug] [Thread-6 (]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+alter table "jaffle_shop"."main"."orders" rename to "orders__dbt_backup"
+[0m15:25:13.033555 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.042785 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.046877 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.customers"
+[0m15:25:13.055875 [debug] [Thread-6 (]: Using duckdb connection "model.jaffle_shop.orders"
+[0m15:25:13.059476 [debug] [Thread-5 (]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+alter table "jaffle_shop"."main"."customers__dbt_tmp" rename to "customers"
+[0m15:25:13.061489 [debug] [Thread-6 (]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+alter table "jaffle_shop"."main"."orders__dbt_tmp" rename to "orders"
+[0m15:25:13.065527 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.072495 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.091496 [debug] [Thread-5 (]: On model.jaffle_shop.customers: COMMIT
+[0m15:25:13.102489 [debug] [Thread-6 (]: On model.jaffle_shop.orders: COMMIT
+[0m15:25:13.104512 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.customers"
+[0m15:25:13.108495 [debug] [Thread-6 (]: Using duckdb connection "model.jaffle_shop.orders"
+[0m15:25:13.111496 [debug] [Thread-5 (]: On model.jaffle_shop.customers: COMMIT
+[0m15:25:13.115487 [debug] [Thread-6 (]: On model.jaffle_shop.orders: COMMIT
+[0m15:25:13.156084 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.168088 [debug] [Thread-5 (]: Using duckdb connection "model.jaffle_shop.customers"
+[0m15:25:13.171102 [debug] [Thread-5 (]: On model.jaffle_shop.customers: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.customers"} */
+drop table if exists "jaffle_shop"."main"."customers__dbt_backup" cascade
+[0m15:25:13.180391 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.197496 [debug] [Thread-6 (]: Using duckdb connection "model.jaffle_shop.orders"
+[0m15:25:13.198479 [debug] [Thread-6 (]: On model.jaffle_shop.orders: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.orders"} */
+drop table if exists "jaffle_shop"."main"."orders__dbt_backup" cascade
+[0m15:25:13.216493 [debug] [Thread-5 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.222471 [debug] [Thread-5 (]: Timing info for model.jaffle_shop.customers (execute): 15:25:12.769981 => 15:25:13.221473
+[0m15:25:13.225391 [debug] [Thread-5 (]: On model.jaffle_shop.customers: Close
+[0m15:25:13.229536 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDD5E3E50>]}
+[0m15:25:13.232406 [info ] [Thread-5 (]: 4 of 5 OK created sql table model main.customers ............................... [[32mOK[0m in 0.51s]
+[0m15:25:13.235500 [debug] [Thread-5 (]: Finished running node model.jaffle_shop.customers
+[0m15:25:13.252217 [debug] [Thread-6 (]: SQL status: OK in 0.0 seconds
+[0m15:25:13.256216 [debug] [Thread-6 (]: Timing info for model.jaffle_shop.orders (execute): 15:25:12.839086 => 15:25:13.255226
+[0m15:25:13.258141 [debug] [Thread-6 (]: On model.jaffle_shop.orders: Close
+[0m15:25:13.264129 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee0c4fd0-a17c-4a38-aeb4-f8a5e4e354a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDBA54450>]}
+[0m15:25:13.268264 [info ] [Thread-6 (]: 5 of 5 OK created sql table model main.orders .................................. [[32mOK[0m in 0.54s]
+[0m15:25:13.271242 [debug] [Thread-6 (]: Finished running node model.jaffle_shop.orders
+[0m15:25:13.281600 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:25:13.283573 [debug] [MainThread]: On master: BEGIN
+[0m15:25:13.285504 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:25:13.287594 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m15:25:13.289577 [debug] [MainThread]: On master: COMMIT
+[0m15:25:13.291489 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:25:13.294581 [debug] [MainThread]: On master: COMMIT
+[0m15:25:13.297717 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m15:25:13.299719 [debug] [MainThread]: On master: Close
+[0m15:25:13.303715 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:25:13.304713 [debug] [MainThread]: Connection 'list_jaffle_shop' was properly closed.
+[0m15:25:13.306714 [debug] [MainThread]: Connection 'list_jaffle_shop_main' was properly closed.
+[0m15:25:13.308712 [debug] [MainThread]: Connection 'model.jaffle_shop.stg_customers' was properly closed.
+[0m15:25:13.309711 [debug] [MainThread]: Connection 'model.jaffle_shop.stg_orders' was properly closed.
+[0m15:25:13.312741 [debug] [MainThread]: Connection 'model.jaffle_shop.stg_payments' was properly closed.
+[0m15:25:13.313724 [debug] [MainThread]: Connection 'model.jaffle_shop.customers' was properly closed.
+[0m15:25:13.315775 [debug] [MainThread]: Connection 'model.jaffle_shop.orders' was properly closed.
+[0m15:25:13.317801 [info ] [MainThread]: 
+[0m15:25:13.320800 [info ] [MainThread]: Finished running 3 view models, 2 table models in 0 hours 0 minutes and 1.94 seconds (1.94s).
+[0m15:25:13.327736 [debug] [MainThread]: Command end result
+[0m15:25:13.350829 [info ] [MainThread]: 
+[0m15:25:13.353921 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:25:13.355831 [info ] [MainThread]: 
+[0m15:25:13.360829 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m15:25:13.365917 [debug] [MainThread]: Command `dbt run` succeeded at 15:25:13.365917 after 3.77 seconds
+[0m15:25:13.367893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDD7796CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDD7794250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDD7796C90>]}
+[0m15:25:13.369922 [debug] [MainThread]: Flushing usage events
