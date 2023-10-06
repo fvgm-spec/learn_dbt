@@ -518,3 +518,440 @@ select
 [0m13:34:14.161243 [debug] [MainThread]: Command `dbt clean` succeeded at 13:34:14.160642 after 0.06 seconds
 [0m13:34:14.162344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254D3D80050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254D3C3E150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254CD9D7090>]}
 [0m13:34:14.163252 [debug] [MainThread]: Flushing usage events
+[0m18:54:21.894628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17A2CDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17A1DB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F179F2290>]}
+
+
+============================== 18:54:21.939448 | d0a9cea8-3bb6-4198-8686-a37282a9fcd0 ==============================
+[0m18:54:21.939448 [info ] [MainThread]: Running with dbt=1.5.0
+[0m18:54:21.943361 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'D:\\dev\\fvgm-spec\\learn_dbt\\chinook_duckdb', 'log_path': 'D:\\dev\\fvgm-spec\\learn_dbt\\chinook_duckdb\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m18:54:23.192223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17A2D890>]}
+[0m18:54:23.231266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17A2D1D0>]}
+[0m18:54:23.267447 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
+[0m18:54:23.271461 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:54:23.275554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F16968DD0>]}
+[0m18:54:25.638716 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.duckdbchinook.obt
+- models.duckdbchinook.staging
+- models.duckdbchinook.intermediate
+[0m18:54:25.657261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17D43D10>]}
+[0m18:54:25.694433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17E6DDD0>]}
+[0m18:54:25.697458 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 313 macros, 0 operations, 11 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m18:54:25.699844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17D6D390>]}
+[0m18:54:25.706306 [info ] [MainThread]: 
+[0m18:54:25.709308 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:54:25.714422 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_chinook'
+[0m18:54:25.750875 [debug] [ThreadPool]: Using duckdb connection "list_chinook"
+[0m18:54:25.751947 [debug] [ThreadPool]: On list_chinook: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "connection_name": "list_chinook"} */
+
+    
+    select schema_name
+    from information_schema.schemata
+  
+  
+[0m18:54:25.753985 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:25.904763 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m18:54:25.910765 [debug] [ThreadPool]: On list_chinook: Close
+[0m18:54:25.917505 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_chinook_main'
+[0m18:54:25.934694 [debug] [ThreadPool]: Using duckdb connection "list_chinook_main"
+[0m18:54:25.935691 [debug] [ThreadPool]: On list_chinook_main: BEGIN
+[0m18:54:25.937611 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:25.940125 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m18:54:25.941231 [debug] [ThreadPool]: Using duckdb connection "list_chinook_main"
+[0m18:54:25.943753 [debug] [ThreadPool]: On list_chinook_main: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "connection_name": "list_chinook_main"} */
+select
+      'chinook' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from information_schema.tables
+    where table_schema = 'main'
+  
+[0m18:54:26.016479 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m18:54:26.023495 [debug] [ThreadPool]: On list_chinook_main: ROLLBACK
+[0m18:54:26.038090 [debug] [ThreadPool]: Failed to rollback 'list_chinook_main'
+[0m18:54:26.040107 [debug] [ThreadPool]: On list_chinook_main: Close
+[0m18:54:26.043684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17C4C110>]}
+[0m18:54:26.045742 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:54:26.046707 [debug] [MainThread]: On master: BEGIN
+[0m18:54:26.048716 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:54:26.050794 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m18:54:26.051820 [debug] [MainThread]: On master: COMMIT
+[0m18:54:26.053755 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:54:26.054750 [debug] [MainThread]: On master: COMMIT
+[0m18:54:26.056833 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m18:54:26.057822 [debug] [MainThread]: On master: Close
+[0m18:54:26.060162 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:54:26.062067 [info ] [MainThread]: 
+[0m18:54:26.138708 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.album
+[0m18:54:26.141708 [info ] [Thread-1 (]: 1 of 11 START seed file main.album ............................................. [RUN]
+[0m18:54:26.144301 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.dbt_duckdb_chinook.album'
+[0m18:54:26.146215 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.album
+[0m18:54:26.149212 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.album (compile): 18:54:26.148212 => 18:54:26.148212
+[0m18:54:26.150312 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.album
+[0m18:54:26.279863 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.album"
+[0m18:54:26.282094 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.album: BEGIN
+[0m18:54:26.284134 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:54:26.286103 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:26.287169 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.album"
+[0m18:54:26.290121 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.album: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.album"} */
+
+    create table "chinook"."main"."album" ("album_id" integer,"title" text,"artist_id" integer)
+  
+[0m18:54:26.293116 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:27.461661 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.album"
+[0m18:54:27.463652 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.album: 
+            insert into "chinook"."main"."album" ("album_id", "title", "artist_id") values
+            (?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),(?,?,?),...
+[0m18:54:35.827155 [debug] [Thread-1 (]: SQL status: OK in 8.0 seconds
+[0m18:54:35.847993 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.album"
+[0m18:54:36.528394 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.album: COMMIT
+[0m18:54:36.530394 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.album"
+[0m18:54:36.532390 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.album: COMMIT
+[0m18:54:36.567934 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:36.570961 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.album (execute): 18:54:26.151306 => 18:54:36.570961
+[0m18:54:36.573966 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.album: Close
+[0m18:54:36.576955 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F19578310>]}
+[0m18:54:36.579965 [info ] [Thread-1 (]: 1 of 11 OK loaded seed file main.album ......................................... [[32mINSERT 347[0m in 10.43s]
+[0m18:54:36.583957 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.album
+[0m18:54:36.586978 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.artist
+[0m18:54:36.589043 [info ] [Thread-1 (]: 2 of 11 START seed file main.artist ............................................ [RUN]
+[0m18:54:36.591954 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.album, now seed.dbt_duckdb_chinook.artist)
+[0m18:54:36.593954 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.artist
+[0m18:54:36.595964 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.artist (compile): 18:54:36.594955 => 18:54:36.594955
+[0m18:54:36.597953 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.artist
+[0m18:54:36.620056 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.artist"
+[0m18:54:36.621951 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.artist: BEGIN
+[0m18:54:36.623953 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:36.626957 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:36.627955 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.artist"
+[0m18:54:36.629955 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.artist: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.artist"} */
+
+    create table "chinook"."main"."artist" ("artist_id" integer,"name" text)
+  
+[0m18:54:36.630955 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:37.256797 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.artist"
+[0m18:54:37.259358 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.artist: 
+            insert into "chinook"."main"."artist" ("artist_id", "name") values
+            (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),...
+[0m18:54:37.272431 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:37.275431 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.artist"
+[0m18:54:37.304158 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.artist: COMMIT
+[0m18:54:37.306163 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.artist"
+[0m18:54:37.308163 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.artist: COMMIT
+[0m18:54:37.347277 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:37.350301 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.artist (execute): 18:54:36.598954 => 18:54:37.350301
+[0m18:54:37.352294 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.artist: Close
+[0m18:54:37.355303 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F1A4FAF90>]}
+[0m18:54:37.357298 [info ] [Thread-1 (]: 2 of 11 OK loaded seed file main.artist ........................................ [[32mINSERT 275[0m in 0.76s]
+[0m18:54:37.360634 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.artist
+[0m18:54:37.361638 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.customer
+[0m18:54:37.363643 [info ] [Thread-1 (]: 3 of 11 START seed file main.customer .......................................... [RUN]
+[0m18:54:37.367640 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.artist, now seed.dbt_duckdb_chinook.customer)
+[0m18:54:37.369637 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.customer
+[0m18:54:37.371649 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.customer (compile): 18:54:37.370640 => 18:54:37.370640
+[0m18:54:37.372636 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.customer
+[0m18:54:37.398982 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.customer"
+[0m18:54:37.400880 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.customer: BEGIN
+[0m18:54:37.402900 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:37.404881 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:37.406980 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.customer"
+[0m18:54:37.408009 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.customer: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.customer"} */
+
+    create table "chinook"."main"."customer" ("customer_id" integer,"first_name" text,"last_name" text,"company" text,"address" text,"city" text,"state" text,"country" text,"postal_code" text,"phone" text,"fax" text,"email" text,"support_rep_id" integer)
+  
+[0m18:54:37.410894 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.230681 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.customer"
+[0m18:54:38.232684 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.customer: 
+            insert into "chinook"."main"."customer" ("customer_id", "first_name", "last_name", "company", "address", "city", "state", "country", "postal_code", "phone", "fax", "email", "support_rep_id") values
+            (?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,...
+[0m18:54:38.249639 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.252721 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.customer"
+[0m18:54:38.267158 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.customer: COMMIT
+[0m18:54:38.269156 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.customer"
+[0m18:54:38.272154 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.customer: COMMIT
+[0m18:54:38.311115 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.315100 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.customer (execute): 18:54:37.373640 => 18:54:38.314097
+[0m18:54:38.317100 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.customer: Close
+[0m18:54:38.319100 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F18FD3190>]}
+[0m18:54:38.321191 [info ] [Thread-1 (]: 3 of 11 OK loaded seed file main.customer ...................................... [[32mINSERT 60[0m in 0.95s]
+[0m18:54:38.325102 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.customer
+[0m18:54:38.327103 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.employee
+[0m18:54:38.329104 [info ] [Thread-1 (]: 4 of 11 START seed file main.employee .......................................... [RUN]
+[0m18:54:38.332546 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.customer, now seed.dbt_duckdb_chinook.employee)
+[0m18:54:38.334548 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.employee
+[0m18:54:38.336551 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.employee (compile): 18:54:38.336551 => 18:54:38.336551
+[0m18:54:38.338542 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.employee
+[0m18:54:38.358551 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.employee"
+[0m18:54:38.361092 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.employee: BEGIN
+[0m18:54:38.362088 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:38.365092 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.366109 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.employee"
+[0m18:54:38.369095 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.employee: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.employee"} */
+
+    create table "chinook"."main"."employee" ("employee_id" integer,"last_name" text,"first_name" text,"title" text,"reports_to" integer,"birth_date" date,"hire_date" date,"address" text,"city" text,"state" text,"country" text,"postal_code" text,"phone" text,"fax" text,"email" text)
+  
+[0m18:54:38.372397 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.505959 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.employee"
+[0m18:54:38.506972 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.employee: 
+            insert into "chinook"."main"."employee" ("employee_id", "last_name", "first_name", "title", "reports_to", "birth_date", "hire_date", "address", "city", "state", "country", "postal_code", "phone", "fax", "email") values
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ...
+[0m18:54:38.514050 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.517046 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.employee"
+[0m18:54:38.531351 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.employee: COMMIT
+[0m18:54:38.533354 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.employee"
+[0m18:54:38.535352 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.employee: COMMIT
+[0m18:54:38.601923 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.605920 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.employee (execute): 18:54:38.340547 => 18:54:38.604918
+[0m18:54:38.606920 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.employee: Close
+[0m18:54:38.610919 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F19D542D0>]}
+[0m18:54:38.612027 [info ] [Thread-1 (]: 4 of 11 OK loaded seed file main.employee ...................................... [[32mINSERT 8[0m in 0.28s]
+[0m18:54:38.618019 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.employee
+[0m18:54:38.621015 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.genre
+[0m18:54:38.623936 [info ] [Thread-1 (]: 5 of 11 START seed file main.genre ............................................. [RUN]
+[0m18:54:38.626926 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.employee, now seed.dbt_duckdb_chinook.genre)
+[0m18:54:38.628928 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.genre
+[0m18:54:38.630925 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.genre (compile): 18:54:38.629939 => 18:54:38.629939
+[0m18:54:38.632939 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.genre
+[0m18:54:38.644925 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.genre"
+[0m18:54:38.646943 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.genre: BEGIN
+[0m18:54:38.647940 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:38.650952 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.651949 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.genre"
+[0m18:54:38.653938 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.genre: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.genre"} */
+
+    create table "chinook"."main"."genre" ("genre_id" integer,"name" text)
+  
+[0m18:54:38.655948 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.713465 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.genre"
+[0m18:54:38.715478 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.genre: 
+            insert into "chinook"."main"."genre" ("genre_id", "name") values
+            (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?)
+        ...
+[0m18:54:38.719474 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.722478 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.genre"
+[0m18:54:38.731457 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.genre: COMMIT
+[0m18:54:38.733467 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.genre"
+[0m18:54:38.734469 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.genre: COMMIT
+[0m18:54:38.792855 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.795941 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.genre (execute): 18:54:38.633928 => 18:54:38.795941
+[0m18:54:38.797856 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.genre: Close
+[0m18:54:38.800852 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17E429D0>]}
+[0m18:54:38.801945 [info ] [Thread-1 (]: 5 of 11 OK loaded seed file main.genre ......................................... [[32mINSERT 25[0m in 0.17s]
+[0m18:54:38.805861 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.genre
+[0m18:54:38.830482 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.invoice
+[0m18:54:38.833499 [info ] [Thread-1 (]: 6 of 11 START seed file main.invoice ........................................... [RUN]
+[0m18:54:38.837478 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.genre, now seed.dbt_duckdb_chinook.invoice)
+[0m18:54:38.839477 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.invoice
+[0m18:54:38.841476 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.invoice (compile): 18:54:38.840476 => 18:54:38.840476
+[0m18:54:38.843476 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.invoice
+[0m18:54:38.920018 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice"
+[0m18:54:38.922019 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice: BEGIN
+[0m18:54:38.925015 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:38.928010 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:38.934553 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice"
+[0m18:54:38.935760 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.invoice"} */
+
+    create table "chinook"."main"."invoice" ("invoice_id" integer,"customer_id" integer,"invoice_date" date,"billing_address" text,"billing_city" text,"billing_state" text,"billing_country" text,"billing_postal_code" text,"total" float8)
+  
+[0m18:54:38.938142 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:42.880678 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice"
+[0m18:54:42.882682 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice: 
+            insert into "chinook"."main"."invoice" ("invoice_id", "customer_id", "invoice_date", "billing_address", "billing_city", "billing_state", "billing_country", "billing_postal_code", "total") values
+            (?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?...
+[0m18:54:42.981401 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:42.985395 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.invoice"
+[0m18:54:42.993846 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice: COMMIT
+[0m18:54:42.995855 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice"
+[0m18:54:42.996852 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice: COMMIT
+[0m18:54:43.026995 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:43.035132 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.invoice (execute): 18:54:38.845479 => 18:54:43.029995
+[0m18:54:43.036341 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice: Close
+[0m18:54:43.038626 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F1A4D2FD0>]}
+[0m18:54:43.039710 [info ] [Thread-1 (]: 6 of 11 OK loaded seed file main.invoice ....................................... [[32mINSERT 412[0m in 4.20s]
+[0m18:54:43.043198 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.invoice
+[0m18:54:43.045365 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.invoice_line
+[0m18:54:43.046801 [info ] [Thread-1 (]: 7 of 11 START seed file main.invoice_line ...................................... [RUN]
+[0m18:54:43.050162 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.invoice, now seed.dbt_duckdb_chinook.invoice_line)
+[0m18:54:43.051337 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.invoice_line
+[0m18:54:43.053363 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.invoice_line (compile): 18:54:43.053363 => 18:54:43.053363
+[0m18:54:43.055392 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.invoice_line
+[0m18:54:43.280173 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice_line"
+[0m18:54:43.283161 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice_line: BEGIN
+[0m18:54:43.285167 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:43.288161 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:43.290163 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice_line"
+[0m18:54:43.292289 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice_line: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.invoice_line"} */
+
+    create table "chinook"."main"."invoice_line" ("invoice_line_id" integer,"invoice_id" integer,"track_id" integer,"unit_price" float8,"quantity" integer)
+  
+[0m18:54:43.293255 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:53.473920 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice_line"
+[0m18:54:53.475916 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice_line: 
+            insert into "chinook"."main"."invoice_line" ("invoice_line_id", "invoice_id", "track_id", "unit_price", "quantity") values
+            (?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?,?,?,?),(?,?...
+[0m18:54:53.739262 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:53.742350 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.invoice_line"
+[0m18:54:53.758296 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice_line: COMMIT
+[0m18:54:53.761262 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.invoice_line"
+[0m18:54:53.762260 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice_line: COMMIT
+[0m18:54:53.871986 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:53.876000 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.invoice_line (execute): 18:54:43.056404 => 18:54:53.874088
+[0m18:54:53.877000 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.invoice_line: Close
+[0m18:54:53.880999 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17CB1650>]}
+[0m18:54:53.884506 [info ] [Thread-1 (]: 7 of 11 OK loaded seed file main.invoice_line .................................. [[32mINSERT 2240[0m in 10.83s]
+[0m18:54:53.888014 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.invoice_line
+[0m18:54:53.890027 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.media_type
+[0m18:54:53.892054 [info ] [Thread-1 (]: 8 of 11 START seed file main.media_type ........................................ [RUN]
+[0m18:54:53.895033 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.invoice_line, now seed.dbt_duckdb_chinook.media_type)
+[0m18:54:53.899021 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.media_type
+[0m18:54:53.900023 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.media_type (compile): 18:54:53.900023 => 18:54:53.900023
+[0m18:54:53.902029 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.media_type
+[0m18:54:53.916022 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.media_type"
+[0m18:54:53.919065 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.media_type: BEGIN
+[0m18:54:53.921120 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:53.928774 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:53.929855 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.media_type"
+[0m18:54:53.932027 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.media_type: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.media_type"} */
+
+    create table "chinook"."main"."media_type" ("media_type_id" integer,"name" text)
+  
+[0m18:54:53.934242 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:53.949529 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.media_type"
+[0m18:54:53.950532 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.media_type: 
+            insert into "chinook"."main"."media_type" ("media_type_id", "name") values
+            (?,?),(?,?),(?,?),(?,?),(?,?)
+        ...
+[0m18:54:53.954430 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:53.957540 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.media_type"
+[0m18:54:53.968523 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.media_type: COMMIT
+[0m18:54:53.971518 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.media_type"
+[0m18:54:53.973466 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.media_type: COMMIT
+[0m18:54:54.006853 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:54.012904 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.media_type (execute): 18:54:53.903028 => 18:54:54.011818
+[0m18:54:54.015814 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.media_type: Close
+[0m18:54:54.020813 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F1A5816D0>]}
+[0m18:54:54.022853 [info ] [Thread-1 (]: 8 of 11 OK loaded seed file main.media_type .................................... [[32mINSERT 5[0m in 0.13s]
+[0m18:54:54.026819 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.media_type
+[0m18:54:54.027836 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.playlist
+[0m18:54:54.030820 [info ] [Thread-1 (]: 9 of 11 START seed file main.playlist .......................................... [RUN]
+[0m18:54:54.033825 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.media_type, now seed.dbt_duckdb_chinook.playlist)
+[0m18:54:54.037894 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.playlist
+[0m18:54:54.041808 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.playlist (compile): 18:54:54.039889 => 18:54:54.039889
+[0m18:54:54.044833 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.playlist
+[0m18:54:54.059889 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist"
+[0m18:54:54.061836 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist: BEGIN
+[0m18:54:54.063812 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:54.067224 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:54.069221 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist"
+[0m18:54:54.072220 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.playlist"} */
+
+    create table "chinook"."main"."playlist" ("playlist_id" integer,"name" text)
+  
+[0m18:54:54.075236 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:54.144087 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist"
+[0m18:54:54.148255 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist: 
+            insert into "chinook"."main"."playlist" ("playlist_id", "name") values
+            (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?)
+        ...
+[0m18:54:54.155272 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:54.161270 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.playlist"
+[0m18:54:54.185496 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist: COMMIT
+[0m18:54:54.188134 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist"
+[0m18:54:54.191167 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist: COMMIT
+[0m18:54:54.230845 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:54.235872 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.playlist (execute): 18:54:54.045911 => 18:54:54.235872
+[0m18:54:54.238371 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist: Close
+[0m18:54:54.242805 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F1A5B6150>]}
+[0m18:54:54.245796 [info ] [Thread-1 (]: 9 of 11 OK loaded seed file main.playlist ...................................... [[32mINSERT 18[0m in 0.21s]
+[0m18:54:54.251285 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.playlist
+[0m18:54:54.252393 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.playlist_track
+[0m18:54:54.255314 [info ] [Thread-1 (]: 10 of 11 START seed file main.playlist_track ................................... [RUN]
+[0m18:54:54.259309 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.playlist, now seed.dbt_duckdb_chinook.playlist_track)
+[0m18:54:54.261310 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.playlist_track
+[0m18:54:54.264308 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.playlist_track (compile): 18:54:54.263313 => 18:54:54.263313
+[0m18:54:54.267312 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.playlist_track
+[0m18:54:54.944129 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist_track"
+[0m18:54:54.947125 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist_track: BEGIN
+[0m18:54:54.949118 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:54:54.952136 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:54:54.954119 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist_track"
+[0m18:54:54.955119 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist_track: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.playlist_track"} */
+
+    create table "chinook"."main"."playlist_track" ("playlist_id" integer,"track_id" integer)
+  
+[0m18:54:54.957131 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:55:13.613382 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist_track"
+[0m18:55:13.615373 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist_track: 
+            insert into "chinook"."main"."playlist_track" ("playlist_id", "track_id") values
+            (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?...
+[0m18:55:14.175832 [debug] [Thread-1 (]: SQL status: OK in 1.0 seconds
+[0m18:55:14.181012 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.playlist_track"
+[0m18:55:14.191122 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist_track: COMMIT
+[0m18:55:14.192123 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.playlist_track"
+[0m18:55:14.194128 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist_track: COMMIT
+[0m18:55:14.226893 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:55:14.231924 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.playlist_track (execute): 18:54:54.268319 => 18:55:14.230911
+[0m18:55:14.233914 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.playlist_track: Close
+[0m18:55:14.238468 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17E396D0>]}
+[0m18:55:14.240457 [info ] [Thread-1 (]: 10 of 11 OK loaded seed file main.playlist_track ............................... [[32mINSERT 8715[0m in 19.98s]
+[0m18:55:14.244379 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.playlist_track
+[0m18:55:14.246366 [debug] [Thread-1 (]: Began running node seed.dbt_duckdb_chinook.track
+[0m18:55:14.249367 [info ] [Thread-1 (]: 11 of 11 START seed file main.track ............................................ [RUN]
+[0m18:55:14.252397 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbt_duckdb_chinook.playlist_track, now seed.dbt_duckdb_chinook.track)
+[0m18:55:14.253414 [debug] [Thread-1 (]: Began compiling node seed.dbt_duckdb_chinook.track
+[0m18:55:14.254366 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.track (compile): 18:55:14.254366 => 18:55:14.254366
+[0m18:55:14.255367 [debug] [Thread-1 (]: Began executing node seed.dbt_duckdb_chinook.track
+[0m18:55:14.845448 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.track"
+[0m18:55:14.846448 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.track: BEGIN
+[0m18:55:14.847447 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:55:14.849840 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:55:14.851862 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.track"
+[0m18:55:14.853866 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.track: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "dbt_duckdb_chinook", "target_name": "dev", "node_id": "seed.dbt_duckdb_chinook.track"} */
+
+    create table "chinook"."main"."track" ("track_id" integer,"name" text,"album_id" integer,"media_type_id" integer,"genre_id" integer,"composer" text,"milliseconds" integer,"bytes" integer,"unit_price" float8)
+  
+[0m18:55:14.856421 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:55:49.143297 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.track"
+[0m18:55:49.145305 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.track: 
+            insert into "chinook"."main"."track" ("track_id", "name", "album_id", "media_type_id", "genre_id", "composer", "milliseconds", "bytes", "unit_price") values
+            (?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?,?,?,?,?),(?,?,?,?,?...
+[0m18:55:49.995872 [debug] [Thread-1 (]: SQL status: OK in 1.0 seconds
+[0m18:55:49.999841 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_duckdb_chinook.track"
+[0m18:55:50.012886 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.track: COMMIT
+[0m18:55:50.014845 [debug] [Thread-1 (]: Using duckdb connection "seed.dbt_duckdb_chinook.track"
+[0m18:55:50.015792 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.track: COMMIT
+[0m18:55:50.143895 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m18:55:50.146798 [debug] [Thread-1 (]: Timing info for seed.dbt_duckdb_chinook.track (execute): 18:55:14.256376 => 18:55:50.146798
+[0m18:55:50.148816 [debug] [Thread-1 (]: On seed.dbt_duckdb_chinook.track: Close
+[0m18:55:50.151876 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a9cea8-3bb6-4198-8686-a37282a9fcd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F17DD18D0>]}
+[0m18:55:50.152941 [info ] [Thread-1 (]: 11 of 11 OK loaded seed file main.track ........................................ [[32mINSERT 3503[0m in 35.90s]
+[0m18:55:50.156884 [debug] [Thread-1 (]: Finished running node seed.dbt_duckdb_chinook.track
+[0m18:55:50.160945 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:55:50.161943 [debug] [MainThread]: On master: BEGIN
+[0m18:55:50.164208 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:55:50.166259 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m18:55:50.166259 [debug] [MainThread]: On master: COMMIT
+[0m18:55:50.168251 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:55:50.169635 [debug] [MainThread]: On master: COMMIT
+[0m18:55:50.170643 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m18:55:50.171734 [debug] [MainThread]: On master: Close
+[0m18:55:50.174644 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:55:50.174644 [debug] [MainThread]: Connection 'list_chinook' was properly closed.
+[0m18:55:50.176648 [debug] [MainThread]: Connection 'list_chinook_main' was properly closed.
+[0m18:55:50.177643 [debug] [MainThread]: Connection 'seed.dbt_duckdb_chinook.track' was properly closed.
+[0m18:55:50.178752 [info ] [MainThread]: 
+[0m18:55:50.181155 [info ] [MainThread]: Finished running 11 seeds in 0 hours 1 minutes and 24.47 seconds (84.47s).
+[0m18:55:50.190889 [debug] [MainThread]: Command end result
+[0m18:55:50.211130 [info ] [MainThread]: 
+[0m18:55:50.214123 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:55:50.217121 [info ] [MainThread]: 
+[0m18:55:50.218123 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[0m18:55:50.220123 [debug] [MainThread]: Command `dbt seed` succeeded at 18:55:50.220123 after 88.45 seconds
+[0m18:55:50.222133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F115C7090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F115C4610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F115C7050>]}
+[0m18:55:50.223287 [debug] [MainThread]: Flushing usage events
