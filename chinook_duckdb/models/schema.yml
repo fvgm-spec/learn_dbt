@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_track
+    description: This table has basic information about a tracks
+
+    columns:
+      - name: track_id
+        description: This is a unique identifier for a track
+        tests:
+          - unique
+          - not_null
+
+      - name: track_name
+        description: add description
+
+      - name: artist_name
+        description: add description
+
+      - name: album_title
+        description: add description
+
+      - name: genre_name
+        description: add description
+
+      - name: track_milliseconds
+        description: add description
+
+      - name: track_bytes
+        description: add description
+
+      - name: media_type_name
+        description: add description
