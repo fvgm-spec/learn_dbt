@@ -2,11 +2,11 @@
     
     
     
-    create table "chinook"."main"."genre" ("genre_id" integer,"name" text)
+    create table "chinook"."main"."raw_genre" ("genre_id" integer,"name" text)
   ;
     -- dbt seed --
     
-            insert into "chinook"."main"."genre" ("genre_id", "name") values
+            insert into "chinook"."main"."raw_genre" ("genre_id", "name") values
             (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?)
         
 

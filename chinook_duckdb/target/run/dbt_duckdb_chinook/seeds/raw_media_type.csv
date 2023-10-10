@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "chinook"."main"."raw_media_type" ("media_type_id" integer,"name" text)
+  ;
+    -- dbt seed --
+    
+            insert into "chinook"."main"."raw_media_type" ("media_type_id", "name") values
+            (?,?),(?,?),(?,?),(?,?),(?,?)
+        
+
+;
+  
