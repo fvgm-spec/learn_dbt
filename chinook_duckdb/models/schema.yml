@@ -12,22 +12,22 @@ models:
           - not_null
 
       - name: track_name
-        description: add description
+        description: Name of the track from track table
 
       - name: artist_name
-        description: add description
+        description: Name of the artist from track table
 
       - name: album_title
-        description: add description
+        description: Title of the album from artist table
 
       - name: genre_name
-        description: add description
+        description: Name of the genre from genre table
 
       - name: track_milliseconds
-        description: add description
+        description: Track duration in milliseconds from track table
 
       - name: track_bytes
-        description: add description
+        description: Track bytes from track table
 
       - name: media_type_name
-        description: add description
+        description: Name of the media type from media_type table
